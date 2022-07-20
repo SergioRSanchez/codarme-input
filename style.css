@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url(fonts/lemon-milk/LEMONMILK-Light.otf) format('otf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url(fonts/lemon-milk/LEMONMILK-Regular.otf) format('otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url(fonts/lemon-milk/LEMONMILK-Medium.otf) format('otf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url(fonts/lemon-milk/LEMONMILK-Bold.otf) format('otf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url(fonts/lemon-milk/LEMONMILK-BoldItalic.otf) format('otf');
+  font-style: italic;
+  font-weight: 700;
+}
+
+body {
+  background: #9C89B8;
+  color: #F0E6EF;
+  padding: 12px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.title {
+  background: #F0A6CA;
+  color: #9C89B8;
+  border-radius: 20px;
+
+  font-size: 32px;
+  padding: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
+}
+
+.link {
+  color: #EFC3E6;
+  line-height: 25px;
+}
+
+.bio {
+  font-size: 30px;
+  line-height: 50px;
+}
