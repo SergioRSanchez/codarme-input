@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    #container {
+      background-color: red;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #header {
+      background: #67b3e4;
+      padding: 16px;
+    }
+
+    #main {
+      flex: 1;
+      display: flex;
+    }
+
+    #sidebar {
+      background: #95a3e0;
+      padding: 16px;
+      width: 60px;
+    }
+    
+    #content {
+      background: #c292de;
+      padding: 16px;
+      flex: 1;
+    }
+    
+    #footer {
+      background: #ffffff;
+      padding: 16px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div id="container">
+    <div id="header">Menu topo</div>
+    <div id="main">
+      <div id="sidebar">Sidebar</div>
+      <div id="content">Conteúdo</div>
+    </div>
+    <div id="footer">Rodapé</div>
+  </div>
+</body>
+</html>
