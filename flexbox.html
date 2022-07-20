@@ -12,8 +12,8 @@
       /* flex-direction: column;
       justify-content:flex-end;
       align-items: flex-start; */
-      justify-content:space-around;
-      flex-wrap: wrap;
+      /* justify-content:space-around;
+      flex-wrap: wrap; */
       background: #CCCCCC;
       /* padding: 40px; */
       height: 600px;
@@ -23,9 +23,15 @@
       background: #6ff36f;
       padding: 20px;
       border: 2px solid #000000;
-      width: 100px;
-      height: 100px;
+      /* width: 100px;
+      height: 100px; */
+      /* flex-grow: 1; */
     }
+
+    .double {
+      order:0;
+    }
+
   </style>
 </head>
 <body>
@@ -33,7 +39,7 @@
     <div class="item">1</div>
     <div class="item">2 <br> 2 <br> 2 <br> 2 <br>2 <br>2 <br></div>
     <div class="item">3</div>
-    <div class="item">4</div>
+    <div class="item double">4</div>
     <div class="item">5</div>
     <div class="item">6</div>
     <div class="item">7</div>
