@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    html, body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    #container {
+      width: 400px;
+      height: 600px;
+      gap: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container-sup {
+      display: flex;
+      gap: 5px;
+    }
+
+    .sup-esq {
+      width: 200px;
+      height: 200px;
+      background: #3f954f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .sup-dir {
+      gap: 5px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .sup-dir1 {
+      background: #cc5a7e;
+      height: 100px;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .sup-dir2 {
+      gap: 5px;
+      height: 100px;
+      display: flex;
+      
+    }
+
+    .sup-dir2e {
+      background: #662730;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .tres {
+      width: 100px;
+      height: 100px;
+      background: #cb76d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .quatro {
+      background: green;
+      height: 200px;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .container-inf {
+      gap: 5px;
+      display: flex;
+      height: 200px;
+    }
+
+    .cinco {
+      background: #48a0be;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 30px;
+    }
+
+    .seis {
+      width: 200px;
+      background: #a7c257;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+  <div id="container">
+    <div class="container-sup">
+      <div class="sup-esq">
+        <div class="zero">0</div>
+      </div>
+      
+      <div class="sup-dir">
+        <div class="sup-dir1">
+          <div class="um">1</div>
+        </div>
+        <div class="sup-dir2">
+          <div class="sup-dir2e">
+            <div class="dois">2</div>
+          </div>
+          <div class="tres">3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quatro">4</div>
+    
+    <div class="container-inf">
+      <div class="cinco ">5</div>
+      <div class="seis">6</div>
+    </div>
+  </div>
+</body>
+</html>
