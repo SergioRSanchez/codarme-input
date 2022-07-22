@@ -34,11 +34,11 @@
     .sup-esq {
       width: 200px;
       height: 200px;
-      background: #3f954f;
+      background: #443742;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 20px;
     }
 
@@ -51,13 +51,13 @@
     }
     
     .sup-dir1 {
-      background: #cc5a7e;
+      background: #846C5B;
       height: 100px;
       width: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 20px;
     }
 
@@ -69,34 +69,34 @@
     }
 
     .sup-dir2e {
-      background: #662730;
+      background: #CEA07E;
       width: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 20px;
     }
 
     .tres {
       width: 100px;
       height: 100px;
-      background: #cb76d8;
+      background: #DEBD91;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 20px;
     }
 
     .quatro {
-      background: green;
+      background: #EDD9A3;
       height: 200px;
       width: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 20px;
     }
 
@@ -107,23 +107,35 @@
     }
 
     .cinco {
-      background: #48a0be;
+      background: #E8E1B2;
       width: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 30px;
     }
 
     .seis {
       width: 200px;
-      background: #a7c257;
+      background: #E2E8C0;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid black;
+      border: 1px solid none;
       border-radius: 20px;
+      
+    }
+
+    .circle {
+      background-color: #ffffff;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid none;
+      border-radius: 50px;
     }
 
 
@@ -135,27 +147,41 @@
   <div id="container">
     <div class="container-sup">
       <div class="sup-esq">
-        <div class="zero">0</div>
+        <div class="zero">
+          <div class="circle">0</div>
+        </div>
       </div>
       
       <div class="sup-dir">
         <div class="sup-dir1">
-          <div class="um">1</div>
+          <div class="um">
+            <div class="circle">1</div>
+          </div>
         </div>
         <div class="sup-dir2">
           <div class="sup-dir2e">
-            <div class="dois">2</div>
+            <div class="dois">
+              <div class="circle">2</div>
+            </div>
           </div>
-          <div class="tres">3</div>
+          <div class="tres">
+            <div class="circle">3</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="quatro">4</div>
+    <div class="quatro">
+      <div class="circle">4</div>
+    </div>
     
     <div class="container-inf">
-      <div class="cinco ">5</div>
-      <div class="seis">6</div>
+      <div class="cinco ">
+        <div class="circle">5</div> 
+      </div>
+      <div class="seis">
+        <div class="circle">6</div> 
+      </div>
     </div>
   </div>
 </body>
