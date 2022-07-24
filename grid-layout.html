@@ -14,11 +14,27 @@
 
     #container {
       display: grid;
-      grid-template-columns: 200px repeat(2, 1fr) 2fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-auto-rows: minmax(80px, auto);
+      gap: 4px 10px;
     }
 
     .item {
       background: #cccccc;
+    }
+
+    .item1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .item3 {
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
     }
 
   </style>
