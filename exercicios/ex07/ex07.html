@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    html, body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    #container {
+      height: 600px;
+      width: 400px;
+      gap: 2px;
+      display: grid;
+      grid-template-areas: 
+      "zero zero um um"
+      "zero zero dois tres"
+      "quatro quatro quatro quatro"
+      "quatro quatro quatro quatro"
+      "cinco cinco seis seis"
+      "cinco cinco seis seis";
+    }
+
+    .item0 {
+      grid-area: zero;
+      background: #FEC5BB;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item1 {
+      grid-area: um;
+      background: #FCD5CE;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item2 {
+      grid-area: dois;
+      background: #FAE1DD;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item3 {
+      grid-area: tres;
+      background: #F8EDEB;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item4 {
+      grid-area: quatro;
+      background: #E8E8E4;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item5 {
+      grid-area: cinco;
+      background: #D8E2DC;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item6 {
+      grid-area: seis;
+      background: #ECE4DB;
+      border: 1px solid none;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle {
+      background-color: #ffffff;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid none;
+      border-radius: 50px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div id="container">
+    <div class="item0"><div class="circle">0</div></div>
+    <div class="item1"><div class="circle">1</div></div>
+    <div class="item2"><div class="circle">2</div></div>
+    <div class="item3"><div class="circle">3</div></div>
+    <div class="item4"><div class="circle">4</div></div>
+    <div class="item5"><div class="circle">5</div></div>
+    <div class="item6"><div class="circle">6</div></div>
+  </div>
+
+</body>
+</html>
