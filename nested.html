@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletores</title>
+
+  <style>
+
+    section#box.x.y {
+      background: red;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="box" class="x y">
+    <p>Um &lt;p&gt; dentro de uma &lt;div&gt;</p>
+  </div>
+  <section id="box" class="x y">
+    <p>Um &lt;p&gt; dentro de uma &lt;div&gt;</p>
+  </section>
+  <section id="box" class="x ">
+    <p>Um &lt;p&gt; dentro de uma &lt;div&gt;</p>
+  </section>
+  <p>&lt;p&gt; fora de uma &lt;div&gt;</p>
+  <div>
+    <span><p>Um &lt;p&gt; dentro de um &lt;span&gt; dentro de uma &lt;div&gt;</p></span>
+  </div>
+  
+</body>
+</html>
