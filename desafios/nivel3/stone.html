@@ -49,8 +49,6 @@
 
       background: var(--light-primary);
 
-      border: 1px solid black;
-
       display: flex;
       align-items: center;
       box-sizing: border-box;
@@ -114,6 +112,117 @@
       margin-left: 1.6rem;
     }
 
+    .hero {
+      background-image: url(../nivel3/hero.png);
+      background-size: 1359.67px 640px;
+
+      width: 1280px;
+      height: 640px;
+    }
+
+    .headline {
+      width: 501px;
+      height: 168px;
+      margin-left: 4rem;
+    }
+
+    .headline h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 56px;
+      color: var(--light-primary);
+
+      margin-bottom: 1rem;
+      margin-top: 25.8rem;
+    }
+
+    .subtitle2 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      color: var(--light-primary);
+
+      margin-bottom: 2.4rem;
+    }
+
+    .headline .stone {
+      width: 203px;
+      height: 56px;
+    }
+
+    .frame1 {
+      width: 1280px;
+      height: 670px;
+
+      background: var(--light-secondary);
+      padding: 10.6rem 0;
+      box-sizing: border-box;
+    }
+
+    .content {
+      width: 1280px;
+      height: 458px;
+
+
+      background: #f9f9f9;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .container1 {
+      margin-left: 26.4rem;
+    }
+
+    .h2 {
+      width: 338px;
+      height: 96px;
+
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: var(--bg-principal);
+      
+      margin-bottom: 1rem;
+      margin-top: 7rem;
+    }
+
+    .h2::first-line {
+      color: var(--dark-primary);
+    }
+
+    .h3 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+
+      width: 314px;
+      height: 130px;
+
+      color: var(--dark-primary);
+      margin-bottom: 2.4rem;
+    }
+
+    .descubra {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: var(--dark-primary);
+
+      width: 232px;
+      height: 56px;
+
+      background: var(--bg-light);
+      border-radius: 90px;
+      border: none;
+    }
+
+    .container2 img {
+      width: 458px;
+      height: 458px;
+    }
+
   </style>
 
 </head>
@@ -133,6 +242,32 @@
     <button class="login">Login</button>
     <button class="stone">Seja Stone</button>
   </header>
+
+  <section class="hero">
+    <div class="headline">
+      <h1>A parceria de mais de 1 milhão de lojistas brasileiros</h1>
+      <div class="subtitle2">Ser Stone é juntar soluções de venda com uma conta PJ gratuita, seguros, plano de saúde e atendimento humano em 5 segundos</div>
+      <button class="stone">Seja Stone agora</button>
+    </div>
+  </section>
+
+  <section class="frame1">
+
+    <div class="content">
+
+      <div class="container1">
+        <div class="h2">Menos banco, mais negócio</div>
+        <div class="h3">Solução financeira com taxas personalizadas e Conta PJ gratuita aberta em poucas horas, direto pelo celular. Sem burocracia, sem asteriscos e sem musiquinha</div>
+        <button class="descubra">Descubra suas taxas</button>
+      </div>
+
+      <div class="container2"><img src="../nivel3/maquina.png" alt=""></div>
+
+    </div>
+
+  </section>
+
+  <section class="frame2"></section>
 
 </body>
 </html>
