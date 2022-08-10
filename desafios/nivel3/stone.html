@@ -218,9 +218,125 @@
       border: none;
     }
 
-    .container2 img {
+    .container2 img, .container3 img {
       width: 458px;
       height: 458px;
+    }
+
+    .frame2 {
+      width: 1280px;
+      height: 570px;
+
+      background: var(--light-primary);
+      padding: 56px 0px;
+    }
+
+    .content2 {
+      width: 1280px;
+      height: 458px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .container3 {
+      margin-left: 16.2rem;
+    }
+
+    .container4 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .h4 {
+      width: 473px;
+      height: 26px;
+      
+      color: var(--bg-dark);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      text-transform: uppercase;
+
+      margin-top: 7.7rem;
+    }
+
+    .h5 {
+      width: 390px;
+      height: 120px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+      color: var(--dark-primary);
+
+      margin-top: 1rem;
+    }
+
+    .h6 {
+      width: 473px;
+      height: 52px;
+
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+
+      color: var(--dark-primary);
+
+      margin-top: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .conheca {
+      width: 230px;
+      height: 26px;
+
+      color: var(--bg-principal);
+      border: none;
+
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+
+      margin-bottom: 1.6rem;
+      background: var(--light-primary);
+    }
+
+    .conheca .texto {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+
+      width: 202px;
+      height: 26px;
+    }
+
+    .descubra-taxas {
+      width: 344px;
+      height: 26px;
+
+      color: var(--bg-principal);
+      border: none;
+
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--light-primary);
+    }
+
+    .descubra-taxas .texto {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+
+      width: 316px;
+      height: 26px;
+    }
+
+    .frame3 {
+      width: 1280px;
+      height: 570px;
+
+      background: black;
     }
 
   </style>
@@ -267,7 +383,39 @@
 
   </section>
 
-  <section class="frame2"></section>
+  <section class="frame2">
+    <div class="content2">
+      
+      <div class="container3"><img src="../nivel3/maquina2.png" alt=""></div>
+      
+      <div class="container4">
+        <div class="h4">MAQUININHA DE CARTÃO</div>
+        <div class="h5">Maquininha rápida, inteligente e com taxas personalizadas</div>
+        <div class="h6">Feita pra vender mais: no débito ou no crédito, no Pix ou no voucher</div>
+        
+        <button class="conheca">
+          <div class="texto">Conheça a maquininha</div>
+          <div class="seta">
+            <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.300041 0.150043C0.63141 -0.0984821 1.10148 -0.0313278 1.35003 0.300041L5.84998 6.30001C6.05001 6.56663 6.05001 6.9333 5.84998 7.2L1.35003 13.1999C1.10148 13.5313 0.63141 13.5984 0.300041 13.3499C-0.0313279 13.1014 -0.0984821 12.6313 0.150043 12.2999L4.3125 6.75L0.150043 1.20003C-0.0984821 0.868663 -0.0313279 0.398568 0.300041 0.150043Z" fill="#00A868"/>
+            </svg>
+          </div>
+        </button>
+
+        <button class="descubra-taxas">
+          <div class="texto">Descubra suas taxas personalizadas</div>
+          <div class="seta">
+            <svg width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.300041 0.150043C0.63141 -0.0984821 1.10148 -0.0313278 1.35003 0.300041L5.84998 6.30001C6.05001 6.56663 6.05001 6.9333 5.84998 7.2L1.35003 13.1999C1.10148 13.5313 0.63141 13.5984 0.300041 13.3499C-0.0313279 13.1014 -0.0984821 12.6313 0.150043 12.2999L4.3125 6.75L0.150043 1.20003C-0.0984821 0.868663 -0.0313279 0.398568 0.300041 0.150043Z" fill="#00A868"/>
+            </svg>
+          </div>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="frame3"></section>
 
 </body>
 </html>
