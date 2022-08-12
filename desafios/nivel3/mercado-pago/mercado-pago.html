@@ -46,6 +46,7 @@
       position: relative;
       width: 1280px;
       height: 914px;
+      background: var(--light-2);
     }
 
     .headline-h1 {
@@ -59,6 +60,12 @@
       font-size: 24px;
       line-height: 32px;
       letter-spacing: -0.005em;
+    }
+
+    .subtitle {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
     }
 
     .button1 {
@@ -233,7 +240,7 @@
       width: 1280px;
       height: 50px;
 
-      background: var(--light-2);
+      /* background: var(--light-2); */
     }
 
     .frame2 .body {
@@ -242,6 +249,106 @@
       height: 24px;
       left: 269px;
       top: 13px;
+
+      color: var(--dark-3);
+    }
+
+    .frame3 {
+      background-image: url(./fundo.png);
+
+      width: 1280px;
+      height: 480px;
+    }
+
+    .container3-1 {
+      width: 1280px;
+      height: 252px;
+    }
+
+    .container3-1 .headline-h1 {
+      width: 336px;
+      height: 132px;
+
+      color: var(--light-1);
+
+      margin-top: 11.4rem;
+      margin-left: 12rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .container3-1 .subtitle {
+      width: 297px;
+      height: 24px;
+      
+      color: var(--light-1);
+
+      margin-left: 12rem;
+      margin-bottom: .8rem;
+    }
+
+    .telefone {
+      width: 369px;
+      height: 72px;
+
+      background: var(--light-1);
+
+      display: flex;
+      align-items: center;
+      padding: 18px;
+      gap: 100px;
+
+      margin-left: 12rem;
+
+      border-radius: .4rem;
+    }
+
+    .telefone-1 {
+      display: flex;
+      align-items: center;
+
+      gap: 1.2rem;
+    }
+
+    .telefone-1 img {
+      width: 33px;
+      height: 23px;
+    }
+
+    .numero {
+      width: 81px;
+      height: 16px;
+
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+
+      color: var(--dark-4);
+    }
+
+    .sublinhado {
+      width: 153px;
+      height: 0px;
+
+      border: 2px solid var(--dark-4);
+    }
+
+    .telefone .button2 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 8px 16px;
+      gap: 10px;
+
+      width: 115px;
+      height: 36px;
+
+      background: var(--light-3);
+      border-radius: 4px;
+    }
+
+    .telefone .button2 .text {
+      width: 83px;
+      height: 20px;
 
       color: var(--dark-3);
     }
@@ -317,6 +424,31 @@
   <section class="frame2">
 
     <div class="body">Com o Pix no Mercado Pago, transferir e receber dinheiro a qualquer hora é mais simples que nunca!</div>
+
+  </section>
+
+  <section class="frame3">
+
+    <div class="container3-1">
+      <div class="headline-h1">AGORA VAI, FAÇA MAIS COM SEU DINHEIRO</div>
+      <div class="subtitle">Informe seu telefone para baixar o app.</div>
+      <div class="telefone">
+
+        <div class="telefone-1">
+          <img src="./brasil.png" alt="bandeira do Brasil">
+          <div class="numero">
+            <div class="text">DDD + número</div>
+            <div class="sublinhado"></div>
+          </div>
+        </div>
+
+        <button class="button2">
+          <div class="text">Enviar SMS</div>
+        </button>
+
+      </div>
+
+    </div>
 
   </section>
 
