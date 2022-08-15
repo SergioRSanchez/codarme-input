@@ -7,13 +7,150 @@
   <title>Barber Shop</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Manrope', sans-serif;
+    }
 
+    :root {
+      font-size: 62.5%;  /* 1rem = 10px */
+      
+      --red1: #ba181b;
+      --red2: #e5383b;
+      --black1: #0b090a;
+      --black2: #161a1d;
+      --white1: #ffffff;
+      --white2: #f5f3f4;
+    }
+
+    .regular {
+      font-weight: 400;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .xs {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
+
+    .sm {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+
+    .md {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
+
+    .lg {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
+
+    .xl {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+    }
+
+    .xl2 {
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+    }
+
+    .xl3 {
+      font-size: 3.2rem;
+      line-height: 4rem;
+    }
+
+    .xl4 {
+      font-size: 4.4rem;
+      line-height: 5.6rem;
+    }
+
+    .xl5 {
+      font-size: 5.6rem;
+      line-height: 6.4rem;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+
+      padding: 2rem;
+      gap: 1rem;
+
+      width: 36rem;
+      height: 8.4rem;
+
+      background: var(--black1);
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* gap: 85.1rem; */
+
+      width: 32rem;
+      height: 4.4rem;
+    }
+
+    .logo {
+      width: 8.6rem;
+      height: 2.6rem;
+
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+
+      color: var(--white1);
+    }
+
+    header button {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 12px 19px;
+      gap: 10px;
+
+      width: 176px;
+      height: 44px;
+
+      border: 2px solid var(--white1);
+      background: none;
+    }
+
+    header button .text {
+      width: 160px;
+      height: 20px;
+
+      letter-spacing: 0.005em;
+
+      color: var(--white1);
+      text-transform: uppercase;
+    }
 
   </style>
 
 </head>
 <body>
   
+  <header>
+    <div class="content">
+      <div class="logo">Sir<strong>Barber</strong></div>
+      <button>
+        <div class="text sm bold">Agendar Horário</div>
+      </button>
+    </div>
+  </header>
+
 </body>
 </html>
