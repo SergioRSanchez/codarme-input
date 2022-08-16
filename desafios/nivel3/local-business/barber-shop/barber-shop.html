@@ -138,7 +138,7 @@
       text-transform: uppercase;
     }
 
-    .container1 {
+    #hero {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -160,7 +160,7 @@
       margin-bottom: 1.6rem;
     }
 
-    .container1 h2 {
+    #hero h2 {
       color: var(--white2);
 
       margin-bottom: 3.2rem;
@@ -198,6 +198,95 @@
       height: 330.74px;
     }
 
+    #services {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 4.8rem 2rem;
+      /* gap: 4.8rem; */
+
+      width: 36rem;
+      height: 180.4rem;
+    }
+
+    #services h1 {
+      width: 32rem;
+      height: 1.6rem;
+
+      color: var(--red2);
+
+      margin-bottom: 1.6rem;
+    }
+
+    #services h2 {
+      width: 28rem;
+      height: 7.2rem;
+
+      color: var(--black1);
+
+      margin-bottom: 4.8rem;
+    }
+
+    #services .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 40px;
+
+      width: 320px;
+      height: 1556px;
+
+      box-sizing: border-box;
+    }
+    
+    #services .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+
+      width: 320px;
+      height: 500px;
+
+      border: 2px solid #D3D3D3;
+    }
+
+    #services .card img {
+      width: 320px;
+      height: 324px;
+    }
+
+    #services .card .texto {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 3.2rem;
+      /* gap: 10px; */
+
+      width: 32rem;
+      height: 17.6rem;
+
+      background: var(--white2);
+    }
+
+    #services .card .texto h1 {
+      width: 256px;
+      height: 32px;
+
+      font-size: 24px;
+      line-height: 32px;
+
+      color: var(--black1);
+    }
+
+    #services .card .texto h2 {
+      width: 236px;
+      height: 72px;
+
+      color: var(--black2);
+    }
+
   </style>
 
 </head>
@@ -212,21 +301,60 @@
     </div>
   </header>
 
-  <div class="container1">
-    <div class="container1-1">
-      <h1 class="xl3 bold">Uma nova experiência em barbearia</h1>
-      <h2 class="md regular">Experimente mudar totalmente sua maneira de ir ao barbeiro com inovação, bom atendimento e com certeza, muito estilo!</h2>
-      <button>
-        <div class="whats-app-simbol">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16.6004 14C16.4004 13.9 15.1004 13.3 14.9004 13.2C14.7004 13.1 14.5004 13.1 14.3004 13.3C14.1004 13.5 13.7004 14.1 13.5004 14.3C13.4004 14.5 13.2004 14.5 13.0004 14.4C12.3004 14.1 11.6004 13.7 11.0004 13.2C10.5004 12.7 10.0004 12.1 9.60037 11.5C9.50037 11.3 9.60037 11.1 9.70037 11C9.80037 10.9 9.90037 10.7 10.1004 10.6C10.2004 10.5 10.3004 10.3 10.3004 10.2C10.4004 10.1 10.4004 9.90001 10.3004 9.80001C10.2004 9.70001 9.70037 8.50001 9.50037 8.00001C9.40037 7.30001 9.20037 7.30001 9.00037 7.30001C8.90037 7.30001 8.70037 7.30001 8.50037 7.30001C8.30037 7.30001 8.00037 7.50001 7.90037 7.60001C7.30037 8.20001 7.00037 8.90001 7.00037 9.70001C7.10037 10.6 7.40037 11.5 8.00037 12.3C9.10037 13.9 10.5004 15.2 12.2004 16C12.7004 16.2 13.1004 16.4 13.6004 16.5C14.1004 16.7 14.6004 16.7 15.2004 16.6C15.9004 16.5 16.5004 16 16.9004 15.4C17.1004 15 17.1004 14.6 17.0004 14.2C17.0004 14.2 16.8004 14.1 16.6004 14ZM19.1004 4.90001C15.2004 1.00001 8.90037 1.00001 5.00037 4.90001C1.80037 8.10001 1.20037 13 3.40037 16.9L2.00037 22L7.30037 20.6C8.80037 21.4 10.4004 21.8 12.0004 21.8C17.5004 21.8 21.9004 17.4 21.9004 11.9C22.0004 9.30001 20.9004 6.80001 19.1004 4.90001ZM16.4004 18.9C15.1004 19.7 13.6004 20.2 12.0004 20.2C10.5004 20.2 9.10037 19.8 7.80037 19.1L7.50037 18.9L4.40037 19.7L5.20037 16.7L5.00037 16.4C2.60037 12.4 3.80037 7.40001 7.70037 4.90001C11.6004 2.40001 16.6004 3.70001 19.0004 7.50001C21.4004 11.4 20.3004 16.5 16.4004 18.9Z" fill="white"/>
-          </svg>
-        </div>
-        <div class="text md bold">Agendar Horário</div>
-      </button>
-      <div class="imagem"><img src="./modelo.png" alt=""></div>
+  <main>
+  
+    <div id="hero">
+      <div class="container1-1">
+        <h1 class="xl3 bold">Uma nova experiência em barbearia</h1>
+        <h2 class="md regular">Experimente mudar totalmente sua maneira de ir ao barbeiro com inovação, bom atendimento e com certeza, muito estilo!</h2>
+        <button>
+          <div class="whats-app-simbol">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.6004 14C16.4004 13.9 15.1004 13.3 14.9004 13.2C14.7004 13.1 14.5004 13.1 14.3004 13.3C14.1004 13.5 13.7004 14.1 13.5004 14.3C13.4004 14.5 13.2004 14.5 13.0004 14.4C12.3004 14.1 11.6004 13.7 11.0004 13.2C10.5004 12.7 10.0004 12.1 9.60037 11.5C9.50037 11.3 9.60037 11.1 9.70037 11C9.80037 10.9 9.90037 10.7 10.1004 10.6C10.2004 10.5 10.3004 10.3 10.3004 10.2C10.4004 10.1 10.4004 9.90001 10.3004 9.80001C10.2004 9.70001 9.70037 8.50001 9.50037 8.00001C9.40037 7.30001 9.20037 7.30001 9.00037 7.30001C8.90037 7.30001 8.70037 7.30001 8.50037 7.30001C8.30037 7.30001 8.00037 7.50001 7.90037 7.60001C7.30037 8.20001 7.00037 8.90001 7.00037 9.70001C7.10037 10.6 7.40037 11.5 8.00037 12.3C9.10037 13.9 10.5004 15.2 12.2004 16C12.7004 16.2 13.1004 16.4 13.6004 16.5C14.1004 16.7 14.6004 16.7 15.2004 16.6C15.9004 16.5 16.5004 16 16.9004 15.4C17.1004 15 17.1004 14.6 17.0004 14.2C17.0004 14.2 16.8004 14.1 16.6004 14ZM19.1004 4.90001C15.2004 1.00001 8.90037 1.00001 5.00037 4.90001C1.80037 8.10001 1.20037 13 3.40037 16.9L2.00037 22L7.30037 20.6C8.80037 21.4 10.4004 21.8 12.0004 21.8C17.5004 21.8 21.9004 17.4 21.9004 11.9C22.0004 9.30001 20.9004 6.80001 19.1004 4.90001ZM16.4004 18.9C15.1004 19.7 13.6004 20.2 12.0004 20.2C10.5004 20.2 9.10037 19.8 7.80037 19.1L7.50037 18.9L4.40037 19.7L5.20037 16.7L5.00037 16.4C2.60037 12.4 3.80037 7.40001 7.70037 4.90001C11.6004 2.40001 16.6004 3.70001 19.0004 7.50001C21.4004 11.4 20.3004 16.5 16.4004 18.9Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="text md bold">Agendar Horário</div>
+        </button>
+        <div class="imagem"><img src="./modelo.png" alt="homem mal encarado"></div>
+      </div>
     </div>
-  </div>
+
+    <div id="services">
+      <h1 class="xs bold">Nossos serviços</h1>
+      <h2 class="xl2 bold">Veja o que fazemos de melhor</h2>
+      
+      <div class="cards">
+
+        <div class="card">
+          <div class="imagem"><img src="./card1.png" alt="imagem de mão com um pente no cabelo"></div>
+          <div class="texto">
+            <h1 class="xl bold">Corte de cabelo</h1>
+            <h2 class="md regular">Cortes profissionais e modernos para valorizar seu estilo.</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imagem"><img src="./card2.png" alt="fazendo a barba com navalha"></div>
+          <div class="texto">
+            <h1 class="xl bold">Barba aparada</h1>
+            <h2 class="md regular">Dê uma bela forma pra sua barba com nossos cuidados especiais.</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imagem"><img src="./card3.png" alt="lavando o cabelo"></div>
+          <div class="texto">
+            <h1 class="xl bold">Lavagem</h1>
+            <h2 class="md regular">Cuide da limpeza da sua cabeça com produtos exclusivos.</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="location"></div>
+
+  </main>
 
 </body>
 </html>
