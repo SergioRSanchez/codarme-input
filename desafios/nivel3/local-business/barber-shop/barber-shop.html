@@ -27,6 +27,8 @@
       --white2: #f5f3f4;
     }
 
+    /*-------- ROOT --------*/
+
     .regular {
       font-weight: 400;
     }
@@ -80,6 +82,8 @@
       line-height: 6.4rem;
     }
 
+    /*-------- HEADER --------*/
+
     header {
       display: flex;
       flex-direction: column;
@@ -87,7 +91,7 @@
       padding: 2rem;
       gap: 1rem;
 
-      width: 36rem;
+      min-width: 36rem;
       height: 8.4rem;
 
       background: var(--black1);
@@ -99,7 +103,7 @@
       align-items: center;
       /* gap: 85.1rem; */
 
-      width: 32rem;
+      min-width: 32rem;
       height: 4.4rem;
     }
 
@@ -138,6 +142,8 @@
       text-transform: uppercase;
     }
 
+    /*-------- HERO --------*/
+
     #hero {
       display: flex;
       flex-direction: row;
@@ -145,10 +151,16 @@
       padding: 4.8rem 2rem 0px;
       gap: 1rem;
 
-      width: 360px;
-      height: 75.474rem;
+      min-width: 360px;
+      max-height: 75.474rem;
 
       background: var(--black1);
+    }
+
+    .container1-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .container1-1 h1 {
@@ -179,6 +191,7 @@
 
       background: var(--red1);
 
+      margin-inline: auto;
       margin-bottom: 4.8rem;
     }
 
@@ -198,14 +211,17 @@
       height: 330.74px;
     }
 
+
+    /*-------- SERVICES --------*/
+
     #services {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       padding: 4.8rem 2rem;
       /* gap: 4.8rem; */
 
-      width: 36rem;
+      min-width: 36rem;
       height: 180.4rem;
     }
 
@@ -298,14 +314,17 @@
       color: var(--black2);
     }
 
+    /*-------- LOCATION --------*/
+
     #location {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       padding: 0px;
 
-      width: 360px;
+      min-width: 360px;
       height: 624px;
+      background: var(--white2);
     }
 
     .location-container {
@@ -315,10 +334,10 @@
       padding: 48px 20px 24px 20px;
       gap: 24px;
 
-      width: 360px;
+      min-width: 360px;
       height: 224px;
 
-      background: var(--white2);
+      /* background: var(--white2); */
     }
 
     .location-container h2 {
@@ -335,6 +354,83 @@
       height: 72px;
 
       color: #0B090A;
+    }
+
+    .adress {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 16px;
+
+      width: 215px;
+      height: 28px;
+    }
+
+    .adress-text {
+      width: 171px;
+      height: 24px;
+
+      color: var(--black2);
+    }
+
+    .map img {
+      width: 360px;
+      height: 400px;
+    }
+
+    /*-------- FOOTER --------*/
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 48px 20px;
+      gap: 10px;
+
+      min-width: 360px;
+      height: 270px;
+
+      background: var(--black2);
+    }
+
+    .footer-text {
+      display: flex;
+      flex-direction: column;
+
+      gap: 10px;
+
+      width: 234px;
+      height: 114px;
+    }
+
+    .footer-text h1 {
+      width: 228px;
+      height: 56px;
+
+      font-size: 48px;
+      line-height: 56px;
+
+      color: var(--white1);
+    }
+
+    .footer-text p {
+      width: 234px;
+      height: 48px;
+
+      color: #FFFAF1;
+    }
+
+    .footer-social {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 13.33px;
+
+      width: 146.67px;
+      height: 40px;
     }
 
   </style>
@@ -357,7 +453,7 @@
       <div class="container1-1">
         <h1 class="xl3 bold">Uma nova experiência em barbearia</h1>
         <h2 class="md regular">Experimente mudar totalmente sua maneira de ir ao barbeiro com inovação, bom atendimento e com certeza, muito estilo!</h2>
-        <button>
+        <button class="btn">
           <div class="whats-app-simbol">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.6004 14C16.4004 13.9 15.1004 13.3 14.9004 13.2C14.7004 13.1 14.5004 13.1 14.3004 13.3C14.1004 13.5 13.7004 14.1 13.5004 14.3C13.4004 14.5 13.2004 14.5 13.0004 14.4C12.3004 14.1 11.6004 13.7 11.0004 13.2C10.5004 12.7 10.0004 12.1 9.60037 11.5C9.50037 11.3 9.60037 11.1 9.70037 11C9.80037 10.9 9.90037 10.7 10.1004 10.6C10.2004 10.5 10.3004 10.3 10.3004 10.2C10.4004 10.1 10.4004 9.90001 10.3004 9.80001C10.2004 9.70001 9.70037 8.50001 9.50037 8.00001C9.40037 7.30001 9.20037 7.30001 9.00037 7.30001C8.90037 7.30001 8.70037 7.30001 8.50037 7.30001C8.30037 7.30001 8.00037 7.50001 7.90037 7.60001C7.30037 8.20001 7.00037 8.90001 7.00037 9.70001C7.10037 10.6 7.40037 11.5 8.00037 12.3C9.10037 13.9 10.5004 15.2 12.2004 16C12.7004 16.2 13.1004 16.4 13.6004 16.5C14.1004 16.7 14.6004 16.7 15.2004 16.6C15.9004 16.5 16.5004 16 16.9004 15.4C17.1004 15 17.1004 14.6 17.0004 14.2C17.0004 14.2 16.8004 14.1 16.6004 14ZM19.1004 4.90001C15.2004 1.00001 8.90037 1.00001 5.00037 4.90001C1.80037 8.10001 1.20037 13 3.40037 16.9L2.00037 22L7.30037 20.6C8.80037 21.4 10.4004 21.8 12.0004 21.8C17.5004 21.8 21.9004 17.4 21.9004 11.9C22.0004 9.30001 20.9004 6.80001 19.1004 4.90001ZM16.4004 18.9C15.1004 19.7 13.6004 20.2 12.0004 20.2C10.5004 20.2 9.10037 19.8 7.80037 19.1L7.50037 18.9L4.40037 19.7L5.20037 16.7L5.00037 16.4C2.60037 12.4 3.80037 7.40001 7.70037 4.90001C11.6004 2.40001 16.6004 3.70001 19.0004 7.50001C21.4004 11.4 20.3004 16.5 16.4004 18.9Z" fill="white"/>
@@ -407,12 +503,54 @@
       <div class="location-container">
         <h2 class="xs bold">Onde estamos</h2>
         <h3 class="xl2 bold">Venha nos fazer uma visita!</h3>
-        <p></p>
+        <div class="adress">
+          <div class="adress-simbol">
+            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5996 20.1752C19.451 21.3238 16.9846 23.7902 15.4137 25.3611C14.6327 26.1421 13.3678 26.1427 12.5868 25.3617C11.0426 23.8175 8.62588 21.4008 7.4003 20.1752C3.7554 16.5303 3.7554 10.6208 7.4003 6.97586C11.0452 3.33096 16.9547 3.33096 20.5996 6.97586C24.2445 10.6208 24.2445 16.5303 20.5996 20.1752Z" stroke="#E5383B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.5 13.5755C17.5 15.5085 15.933 17.0755 14 17.0755C12.067 17.0755 10.5 15.5085 10.5 13.5755C10.5 11.6425 12.067 10.0755 14 10.0755C15.933 10.0755 17.5 11.6425 17.5 13.5755Z" stroke="#E5383B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="adress-text md regular">Rua 08 de agosto, 497</div>
+        </div>
+      </div>
+
+      <div class="map">
+        <img src="./map-mobile.png" alt="mapa da localização do estabelecimento">
       </div>
 
     </div>
 
   </main>
+
+  <footer>
+
+    <div class="footer-text">
+      <h1 class="regular">Sir<strong>Barber</strong></h1>
+      <p class="md regular">©2022 - SirBarber.<br>
+        Todos os direitos reservados.</p>
+    </div>
+
+    <div class="footer-social">
+      <div class="facebook">
+        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 20.7448C32.0005 18.4514 31.3438 16.2059 30.1077 14.2742C28.8716 12.3425 27.1078 10.8054 25.0252 9.84506C22.9426 8.88468 20.6284 8.54118 18.3566 8.85525C16.0849 9.16932 13.9507 10.1278 12.2068 11.6172C10.4628 13.1066 9.18225 15.0645 8.51659 17.2592C7.85094 19.4538 7.82811 21.7933 8.45082 24.0005C9.07352 26.2077 10.3157 28.1902 12.0302 29.7134C13.7447 31.2365 15.8598 32.2365 18.125 32.5948V24.2128H15.079V20.7448H18.125V18.0998C18.0596 17.4826 18.1307 16.8585 18.3333 16.2718C18.5359 15.6851 18.865 15.1501 19.2973 14.7047C19.7296 14.2593 20.2546 13.9144 20.835 13.6944C21.4154 13.4745 22.0371 13.3848 22.656 13.4318C23.556 13.4438 24.454 13.5218 25.343 13.6658V16.6228H23.831C23.5734 16.589 23.3115 16.6136 23.0648 16.6948C22.818 16.7759 22.5926 16.9116 22.4053 17.0916C22.2181 17.2717 22.0737 17.4916 21.983 17.735C21.8922 17.9784 21.8573 18.2391 21.881 18.4978V20.7478H25.209L24.677 24.2158H21.875V32.6028C24.6984 32.1562 27.2697 30.7163 29.1259 28.5424C30.9821 26.3685 32.0013 23.6034 32 20.7448Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="twitter">
+        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32.3334 12.9922C31.4334 13.4422 30.5334 13.5922 29.4834 13.7422C30.5334 13.1422 31.2834 12.2422 31.5834 11.0422C30.6834 11.6422 29.6334 11.9422 28.4334 12.2422C27.5334 11.3422 26.1834 10.7422 24.8334 10.7422C22.2834 10.7422 20.0334 12.9922 20.0334 15.6922C20.0334 16.1422 20.0334 16.4422 20.1834 16.7422C16.1334 16.5922 12.3834 14.6422 9.98337 11.6422C9.53337 12.3922 9.38337 13.1422 9.38337 14.1922C9.38337 15.8422 10.2834 17.3422 11.6334 18.2422C10.8834 18.2422 10.1334 17.9422 9.38337 17.6422C9.38337 20.0422 11.0334 21.9922 13.2834 22.4422C12.8334 22.5922 12.3834 22.5922 11.9334 22.5922C11.6334 22.5922 11.3334 22.5922 11.0334 22.4422C11.6334 24.3922 13.4334 25.8922 15.6834 25.8922C14.0334 27.2422 11.9334 27.9922 9.53337 27.9922H8.33337C10.5834 29.3422 13.1334 30.2422 15.8334 30.2422C24.8334 30.2422 29.7834 22.7422 29.7834 16.2922V15.6922C30.8334 14.9422 31.7334 14.0422 32.3334 12.9922Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="instagram">
+        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M27.9028 16.2004C27.6328 16.4705 27.2665 16.6222 26.8846 16.6222C26.5027 16.6222 26.1365 16.4705 25.8664 16.2004C25.5963 15.9304 25.4446 15.5641 25.4446 15.1822C25.4446 14.8003 25.5963 14.434 25.8664 14.164C26.1365 13.8939 26.5027 13.7422 26.8846 13.7422C27.2665 13.7422 27.6328 13.8939 27.9028 14.164C28.1729 14.434 28.3246 14.8003 28.3246 15.1822C28.3246 15.5641 28.1729 15.9304 27.9028 16.2004Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6666 21.3442C14.6666 24.6532 17.3576 27.3442 20.6666 27.3442C23.9756 27.3442 26.6666 24.6532 26.6666 21.3442C26.6666 18.0352 23.9756 15.3442 20.6666 15.3442C17.3576 15.3442 14.6666 18.0352 14.6666 21.3442ZM17.6666 21.3442C17.6666 19.6892 19.0116 18.3442 20.6666 18.3442C22.3217 18.3442 23.6666 19.6892 23.6666 21.3442C23.6666 22.9992 22.3217 24.3442 20.6666 24.3442C19.0116 24.3442 17.6666 22.9992 17.6666 21.3442Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66663 26.7422C8.66663 29.8262 11.5826 32.7422 14.6666 32.7422H26.6666C29.7506 32.7422 32.6666 29.8262 32.6666 26.7422V14.7422C32.6666 11.6582 29.7506 8.74219 26.6666 8.74219H14.6666C11.5826 8.74219 8.66663 11.6582 8.66663 14.7422V26.7422ZM11.6666 14.7422C11.6666 13.3402 13.2646 11.7422 14.6666 11.7422H26.6666C28.0686 11.7422 29.6666 13.3402 29.6666 14.7422V26.7422C29.6666 28.1442 28.0686 29.7422 26.6666 29.7422H14.6666C13.2366 29.7422 11.6666 28.1722 11.6666 26.7422V14.7422Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+  </footer>
 
 </body>
 </html>
