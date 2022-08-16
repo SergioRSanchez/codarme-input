@@ -298,6 +298,45 @@
       color: var(--black2);
     }
 
+    #location {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+
+      width: 360px;
+      height: 624px;
+    }
+
+    .location-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 48px 20px 24px 20px;
+      gap: 24px;
+
+      width: 360px;
+      height: 224px;
+
+      background: var(--white2);
+    }
+
+    .location-container h2 {
+      width: 320px;
+      height: 16px;
+
+      text-transform: uppercase;
+
+      color: #E5383B;
+    }
+
+    .location-container h3 {
+      width: 320px;
+      height: 72px;
+
+      color: #0B090A;
+    }
+
   </style>
 
 </head>
@@ -363,7 +402,15 @@
       </div>
     </div>
 
-    <div id="location"></div>
+    <div id="location">
+
+      <div class="location-container">
+        <h2 class="xs bold">Onde estamos</h2>
+        <h3 class="xl2 bold">Venha nos fazer uma visita!</h3>
+        <p></p>
+      </div>
+
+    </div>
 
   </main>
 
