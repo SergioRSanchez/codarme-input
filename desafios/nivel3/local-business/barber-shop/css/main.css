@@ -1,0 +1,115 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+/*----- ROOT -----*/
+
+:root {
+  font-size: 62.5%;  /* 1rem = 10px */
+  
+  --red1: #BA181B;
+  --red2: #E5383B;
+  --black1: #0B090A;
+  --black2: #161A1D;
+  --white1: #FFFFFF;
+  --white2: #F5F3F4;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 2rem 4rem;
+  
+  color: var(--white1);
+
+  text-transform: uppercase;
+
+  font-size: 1.6rem;
+}
+
+.btn-sm {
+  padding: 1.2rem 2.4rem;
+
+  font-size: 1.4rem;
+}
+
+.btn-primary {
+  background-color: var(--red1);
+}
+
+.btn-outline {
+  border: .2rem solid var(--white1);
+  background-color: transparent;
+}
+
+/*----- HEADER -----*/
+
+#header-container {
+  background-color: var(--black1);
+}
+
+.header {
+  color: var(--white1);
+
+  padding: 2.4rem 7.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*----- HERO -----*/
+
+#hero-container {
+  background-color: var(--black1);
+  color: var(--white1);
+}
+
+.hero {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3.2rem;
+}
+
+.hero-text, .hero-img {
+  flex: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 1.6rem;
+}
+
+.hero-img img {
+  max-width: 100%;
+}
+
+.hero-text__title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.hero-text__subtitle {
+  font-size: 20px;
+  line-height: 28px;
+
+  max-width: 52rem;
+}
+
+/*----- SERVICES -----*/
+
+/* 1 hora e 13 minutos */
