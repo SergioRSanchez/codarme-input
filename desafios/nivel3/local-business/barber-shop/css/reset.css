@@ -55,3 +55,7 @@ button {
 	border: none;
 	outline: none;
 }
+
+img {
+	vertical-align: bottom;
+}

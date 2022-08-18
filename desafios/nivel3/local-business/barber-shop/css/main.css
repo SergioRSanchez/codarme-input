@@ -78,19 +78,25 @@ body {
   align-items: center;
 
   gap: 3.2rem;
-}
 
-.hero-text, .hero-img {
-  flex: 1;
+  padding: 0 7.2rem;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
+  flex: 1;
 
   align-items: flex-start;
 
   gap: 1.6rem;
+
+  padding: 9.6rem 0;
+}
+
+.hero-img {
+  flex: 1;
+  align-self: flex-end;
 }
 
 .hero-img img {
@@ -112,4 +118,80 @@ body {
 
 /*----- SERVICES -----*/
 
-/* 1 hora e 13 minutos */
+.services {
+  padding: 9.6rem 7.2rem;
+}
+
+.overtitle {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  text-transform: uppercase;
+
+  color: var(--red2);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 5.6rem;
+
+  color: var(--black1);
+}
+
+.services-list {
+  margin-top: 4.8rem;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.service-card {
+  background-color: var(--white2);
+
+  border: 2px solid #D3D3D3;
+}
+
+.service-card img {
+  width: 100%;
+}
+
+.service-card__text {
+  padding: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.service-card__text h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: var(--black1);
+}
+
+.service-card__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--black2);
+}
+
+/*----- LOCATION -----*/
+
+#location-container {
+  background: #F5F3F4;
+}
+
+#location-container header {
+  padding: 9.6rem 7.2rem 4.8rem;
+}
+
+#location-container address {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
