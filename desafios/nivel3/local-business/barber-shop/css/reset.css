@@ -56,6 +56,6 @@ button {
 	outline: none;
 }
 
-img {
+iframe, img {
 	vertical-align: bottom;
 }

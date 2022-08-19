@@ -32,6 +32,10 @@ body {
   text-transform: uppercase;
 
   font-size: 1.6rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .btn-sm {
@@ -42,6 +46,10 @@ body {
 
 .btn-primary {
   background-color: var(--red1);
+}
+
+.btn-primary:hover {
+  background: #941B1D;
 }
 
 .btn-outline {
@@ -186,7 +194,7 @@ body {
   background: #F5F3F4;
 }
 
-#location-container header {
+#location-container .location {
   padding: 9.6rem 7.2rem 4.8rem;
 }
 
@@ -194,4 +202,30 @@ body {
   display: flex;
   gap: 1.6rem;
   align-items: center;
+}
+
+/*----- FOOTER -----*/
+
+footer {
+  background: var(--black2);
+  color: var(--white1);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 4.8rem 7.2rem;
+}
+
+footer a {
+  color: currentColor;
+}
+
+.footer-logocopy {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.6rem;
 }
