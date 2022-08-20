@@ -1,0 +1,28 @@
+:root {
+  font-size: 62.5%;  /* 1rem = 10px */
+  
+  --blue1: #19456B;
+  --blue2: #11698E;
+  --green1: #16C79A;
+  --white1: #FFFFFF;
+  --white2: #F8F1F1;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+#header-container {
+  background: #F8F1F1;
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
