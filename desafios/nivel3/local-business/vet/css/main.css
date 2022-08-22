@@ -12,6 +12,8 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
+/*----- HEADER -----*/
+
 #header-container {
   background: #F8F1F1;
 }
@@ -25,4 +27,310 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 2rem;
+}
+
+.btn-header {
+  padding: 1.2rem 2.4rem;
+
+  border: .2rem solid var(--blue1);
+  border-radius: 9rem;
+
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+
+  letter-spacing: 0.005em;
+
+  color: var(--blue1);
+  background: none;
+
+  text-transform: uppercase;
+}
+
+.btn-header:hover {
+  border: 2px solid var(--blue2);
+  color: var(--blue2);
+}
+
+/*----- HERO -----*/
+
+#hero-container {
+  background: var(--white2);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  padding: 4.8rem 2rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+
+  align-items: flex-start;
+}
+
+.hero-text__title {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  color: var(--blue1);
+}
+
+.hero-text__subtitle {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  color: var(--blue2);
+}
+
+.btn-hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 2rem 4rem;
+
+  background: #16C79A;
+  border-radius: 9rem;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  letter-spacing: 0.005em;
+
+  color: var(--white1);
+  text-transform: uppercase;
+}
+
+.btn-hero:hover {
+  background: #1AA17E;
+}
+
+.hero-img {
+  flex: 1;
+}
+
+.hero-img img {
+  max-width: 100%;
+}
+
+/*----- SERVICES -----*/
+
+#services-container {
+  background: var(--blue1);
+}
+
+#services-container header {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.services {
+  padding: 4.8rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4.8rem;
+}
+
+.overtitle {
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  color: var(--green1);
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+
+  color: #FFF5FD;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-card {
+  background: var(--blue2);
+  border-radius: 3.2rem;
+}
+
+.service-card img {
+  width: 100%;
+}
+
+.service-card__text {
+  padding: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.service-card__text h3 {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: var(--white1);
+}
+
+.service-card__text p {
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--white2);
+}
+
+/*----- LOCATION -----*/
+
+#location-container {
+  background: var(--white2);
+}
+
+.location header {
+  padding: 4.8rem 2rem 2.6rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.location .overtitle {
+  color: var(--blue2);
+  line-height: 24px;
+}
+
+.location .title {
+  color: var(--blue1);
+}
+
+address {
+  display: flex;
+  align-items: center;
+
+  gap: 1.6rem;
+}
+
+address span {
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--blue2);
+}
+
+/*----- FOOTER -----*/
+
+footer {
+  background: var(--blue2);
+  color: var(--white1);
+}
+
+.footer {
+  padding: 4.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-logocopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.footer-logocopy span {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+footer .social {
+  display: flex;
+  gap: 2.4rem;
+}
+
+footer a {
+  color: currentColor;
+}
+
+/*-------- RESPONSIVE --------*/
+
+@media (min-width: 1024px) {
+
+  /*----- HERO -----*/
+
+  .hero {
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+  .hero-text {
+    padding: 9.6rem 0;
+    gap: 2rem;
+  }
+
+  .hero-text__title {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .hero-text__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  /*----- SERVICES -----*/
+
+  .services {
+    padding: 9.6rem 7.2rem;
+  }
+
+  .overtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  .services-list {
+    flex-direction: row;
+  }
+
+  /*----- LOCATION -----*/
+
+  #location-container address span {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  /*----- FOOTER -----*/
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 }
