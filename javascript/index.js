@@ -85,6 +85,14 @@ console.log(guest3)
 console.log(guest4)
 
 
+// Acessando propriedades de um objeto
+console.log('-')
+console.log('-----Acessando propriedades de objetos-----')
+
+console.log(guest3.name)
+console.log(guest3['name'])
+
+
 // Objetos dentro de lista
 console.log('-')
 console.log('-----Objeto dentro de Lista-----')
@@ -100,3 +108,35 @@ const guestList = [
 ]
 
 console.log(guestList)
+console.log(guestList[0].name)
+
+
+// Objetos dentro de objeto
+console.log('-')
+console.log('-----Objeto dentro de objeto-----')
+
+const obj = {
+  name: 'Sergio',
+  company: {
+    name: 'Freela',
+  }
+}
+
+console.log(obj.company.name)
+
+
+// Adicionando propriedades ao objeto
+console.log('-')
+console.log('-----Adicionando propriedades ao objeto-----')
+
+const person = { name: 'Sergio' }
+console.log(person)
+
+person.age = 32
+console.log(person)
+
+person.outra = {}
+console.log(person)
+
+person.outra.qualquer = 10
+console.log(person)
