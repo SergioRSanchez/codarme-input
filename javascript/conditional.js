@@ -18,3 +18,22 @@ lightIsGreen = true
 lightIsGreen ? console.log('semáforo VERDE') : console.log('PARE')
 
 
+console.log('-----If ternário dentro de uma variável-----')
+let x = true ? 10 : 20
+console.log(x)
+x = false ? 10 : 20
+console.log(x)
+
+
+console.log('-----Switch / Case-----')
+const semaforo = 'preto'
+
+switch (semaforo) {
+  case 'vermelho': console.log('Semáforo VERMELHO')
+    break
+  case 'amarelo': console.log('Semáforo AMARELO')
+    break
+  case 'verde': console.log('Semáforo VERDE')
+    break
+  default: console.log('Semáforo DESLIGADO')
+}
