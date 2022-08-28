@@ -1,6 +1,6 @@
-console.log('Iniciando')
+console.log('-----If e Else normal-----')
 
-const lightIsGreen = false
+let lightIsGreen = false
 const lightIsYellow = true
 
 if (lightIsGreen) {
@@ -11,4 +11,10 @@ if (lightIsGreen) {
   console.log('O semáforo está VERMELHO, pare')
 }
 
-console.log('Finalizando')
+
+console.log('-----If ternário-----')
+
+lightIsGreen = true
+lightIsGreen ? console.log('semáforo VERDE') : console.log('PARE')
+
+
