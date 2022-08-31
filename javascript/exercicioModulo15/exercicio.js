@@ -39,9 +39,10 @@ const classeA = 22000
 const classeB = 7100
 const classeC = 2900
 
-renda = 8300
+renda = 28300
 
 //  if normal
+console.log('If normal:')
 if (renda > classeA) {
   console.log('Classe A')
 } else if (renda > classeB) {
@@ -53,6 +54,7 @@ if (renda > classeA) {
 }
 
 //  if ternário
+console.log('If ternário:')
 renda > classeA ? console.log('Classe A') : renda > classeB ? console.log('Classe B') : renda > classeC ? console.log('Classe C') : console.log('Classe D')
 
 
@@ -64,3 +66,46 @@ renda > classeA ? console.log('Classe A') : renda > classeB ? console.log('Class
 
 - Usando o exercício anterior, verifique a classe econômica, excluindo herdeiros e desempregados. */
 console.log('----- Exercício 3 -----')
+
+const person = {
+  name: 'Jão',
+  renda: 7800,
+  job: true,
+  heir: false,
+}
+
+if (person.job === true && person.heir !== true) {
+  person.renda > classeA ? console.log('Classe A') : person.renda > classeB ? console.log('Classe B') : person.renda > classeC ? console.log('Classe C') : console.log('Classe D')
+} else if (person.heir === true) {
+  console.log('Herdeiro')
+} else if (person.job !== true) {
+  console.log('Pessoa desempregada')
+}
+
+
+/* 4. Verificando um veículo
+
+- Crie uma variável chamada veículo
+
+- Crie atributos cor, marca (fiat, renault, chevrolet, mercedes...), modelo, tipo (carro, moto, caminhão)
+
+- Utilize um switch baseado no tipo de veículo, para mostrar a mensagem O [MODELO] é um veículo de [RODAS] rodas da marca [MARCA] (substitua as variáveis na string)
+
+OBS: Você não tem uma variável RODAS, então, terá que definir baseada no tipo de veículo. */
+console.log('----- Exercício 4 -----')
+
+const vehicle = {
+  color: 'yellow',
+  brand: 'volkswagen',
+  model: 'brasilia',
+  type: 'car',
+}
+
+switch (vehicle.type) {
+  case 'car': console.log(`O/A ${vehicle.model} é um veículo de 4 rodas da marca ${vehicle.brand}.`)
+    break;
+  case 'motorcycle': console.log(`O/A ${vehicle.model} é um veículo de 2 rodas da marca ${vehicle.brand}.`)
+    break;
+  default: console.log(`O/A ${vehicle.model} é um veículo de 6 ou mais rodas da marca ${vehicle.brand}.`)
+    break;
+}
