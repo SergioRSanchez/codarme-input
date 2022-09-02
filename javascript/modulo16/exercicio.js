@@ -23,6 +23,12 @@ console.log(`O resultado da execução é ${result}`)
 - Mostre no console o valor final. */
 console.log('-----Exercício 2-----')
 
+function sum2(n1, n2, n3, n4) {
+  return n1 + n2 + n3 + n4
+}
+
+const resultSum2 = sum2(1, 2, 3, 4) * 3
+console.log(resultSum2)
 
 
 /* 3. Crie uma função com as seguintes características:
@@ -35,7 +41,6 @@ console.log('-----Exercício 2-----')
 
 - Invoque a função criada acima, passando só um número como parâmetro e mostre o resultado. */
 console.log('-----Exercício 3-----')
-
 
 
 /* 4. Criador de objetos
