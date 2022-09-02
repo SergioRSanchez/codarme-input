@@ -68,9 +68,9 @@ console.log('-----Exercício 4-----')
 const person = function (nome, idade) {
   return { nome: nome, idade: idade, anoNascimento: 2022 - idade }
 }
-console.log(person('Sergio', 32))
+// console.log(person('Sergio', 32))
 
 function exercise4(person) {
-  return `${person.nome} tem ${person.idade} pois nasceu em ${person.anoNascimento}`
+  console.log(`${person.nome} tem ${person.idade} pois nasceu em ${person.anoNascimento}`)
 }
-console.log(exercise4(person('Sergio')))
+exercise4(person('Sergio', 32))
