@@ -42,6 +42,15 @@ console.log(resultSum2)
 - Invoque a função criada acima, passando só um número como parâmetro e mostre o resultado. */
 console.log('-----Exercício 3-----')
 
+function exercise3(n1, n2, n3) {
+  if (n1 == null || n2 == null || n3 == null) {
+    console.log('Os valores não foram preenchidos corretamente!')
+  } else {
+    console.log((n1 + n2 + n3) * 4)
+  }
+}
+exercise3(1)
+
 
 /* 4. Criador de objetos
 
@@ -55,3 +64,13 @@ console.log('-----Exercício 3-----')
 
 - Execute a função acima, e mostre a frase no console sem atribuir o valor à uma variável. */
 console.log('-----Exercício 4-----')
+
+const person = function (nome, idade) {
+  return { nome: nome, idade: idade, anoNascimento: 2022 - idade }
+}
+console.log(person('Sergio', 32))
+
+function exercise4(person) {
+  return `${person.nome} tem ${person.idade} pois nasceu em ${person.anoNascimento}`
+}
+console.log(exercise4(person('Sergio')))
