@@ -66,3 +66,42 @@ guest.forEach(item => {
   }
 })
 console.log(confirmedGuests)
+
+console.log('----- Lista baseada em outra lista usando filter -----')
+/* Utilizando o filter para fazer a mesma coisa */
+const confirmedGuests2 = guest.filter((item) => {
+  if (item.confirmed) {
+    return true
+  } else {
+    return false
+  }
+})
+console.log(confirmedGuests2)
+
+// Podemos fazer com um if ternário, que fica mais fácil ainda
+const confirmedGuests3 = guest.filter((item) => {
+  return item.confirmed ? true : false
+})
+console.log(confirmedGuests3)
+
+// Podemos usar também o early return
+const confirmedGuests4 = guest.filter((item) => {
+  if (item.confirmed) {
+    return true
+  }
+  return false
+})
+console.log(confirmedGuests4)
+
+// Nesse caso como o confirmed é um boolean, podemos só retornar o true
+const confirmedGuests5 = guest.filter(item => item.confirmed)
+console.log(confirmedGuests5)
+
+
+console.log('----- Alterando uma lista com map -----')
+
+const presentGuests = confirmedGuests5.map(item => {
+  item.isPresent = true
+  return item
+})
+console.log(presentGuests)
