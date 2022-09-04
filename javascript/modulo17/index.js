@@ -19,7 +19,6 @@ function callback(guest) {
 guest.forEach(callback)
 
 
-
 console.log('----- for -----')
 
 /* primeiro é definição da variável, segundo é o critério de parada,
@@ -105,3 +104,40 @@ const presentGuests = confirmedGuests5.map(item => {
   return item
 })
 console.log(presentGuests)
+
+
+console.log('----- forEach - Mutabilidade - Somando idades de todos os objetos da lista -----')
+let idadeTotal = 0
+
+guest.forEach(item => {
+  idadeTotal = idadeTotal + item.age
+})
+console.log(idadeTotal)
+
+
+console.log('----- Reduce -----')
+
+function somaIdade(acc, item) {
+  return item.age + acc
+}
+const idadeTotal2 = guest.reduce(somaIdade, 0)
+console.log(idadeTotal2)
+
+
+console.log('----- Maior idade da lista usando o Reduce -----')
+function somaIdade2(acc, item) {
+  const resultado = {
+    idadeTotal3: item.age + acc.idadeTotal3,
+    maiorIdade: acc.maiorIdade
+  }
+  if (item.age > acc.maiorIdade) {
+    resultado.maiorIdade = item.age
+  }
+  return resultado
+}
+const idades = guest.reduce(somaIdade2, {
+  idadeTotal3: 0,
+  maiorIdade: 0
+})
+
+console.log(idades)
