@@ -141,3 +141,31 @@ const idades = guest.reduce(somaIdade2, {
 })
 
 console.log(idades)
+
+
+console.log('----- Adicionando itens em um array -----')
+
+const lista = ['meio']
+console.log(lista.length)
+console.log(lista)
+lista.push('fim')
+console.log(lista.length)
+console.log(lista)
+lista.push('fim 2')
+console.log(lista.length)
+console.log(lista)
+lista.unshift('inicio 2')
+console.log(lista.length)
+console.log(lista)
+lista.unshift('inicio')
+console.log(lista.length)
+console.log(lista)
+lista.pop()
+console.log(lista.length)
+console.log(lista)
+lista.shift()
+console.log(lista.length)
+console.log(lista)
+lista.splice(1, 1)
+console.log(lista.length)
+console.log(lista)
