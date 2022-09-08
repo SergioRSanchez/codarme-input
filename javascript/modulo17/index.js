@@ -160,12 +160,17 @@ console.log(lista)
 lista.unshift('inicio')
 console.log(lista.length)
 console.log(lista)
+
+
+console.log('----- Removendo itens em um array -----')
+
+
 lista.pop()
 console.log(lista.length)
 console.log(lista)
 lista.shift()
 console.log(lista.length)
 console.log(lista)
-lista.splice(1, 1)
+lista.splice(1, 1)  //  (índice, quantidade de itens a remover)
 console.log(lista.length)
 console.log(lista)
