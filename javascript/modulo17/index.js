@@ -164,7 +164,6 @@ console.log(lista)
 
 console.log('----- Removendo itens em um array -----')
 
-
 lista.pop()
 console.log(lista.length)
 console.log(lista)
@@ -173,4 +172,17 @@ console.log(lista.length)
 console.log(lista)
 lista.splice(1, 1)  //  (índice, quantidade de itens a remover)
 console.log(lista.length)
+console.log(lista)
+
+
+console.log('----- findIndex -----')
+
+const index = lista.findIndex((item) => item === 'fim')
+console.log(index)
+console.log(lista)
+if (index > -1) {
+  lista.splice(index, 1)
+} else {
+  console.log('Item não encontrado')
+}
 console.log(lista)
