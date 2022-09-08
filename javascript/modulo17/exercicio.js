@@ -73,6 +73,18 @@ console.log(multiplicaImpar)
 - Execute forEach passando uma lista de 7 números, e um callback que mostre a mensagem "O número NUMERO é par/ímpar". */
 console.log('-----Exercício 4-----')
 
+function forEach(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) {
+      console.log(`O número ${array[i]} é par`)
+    } else {
+      console.log(`O número ${array[i]} é ímpar`)
+    }
+  }
+}
+
+forEach([1, 2, 3, 4, 5, 6, 7])
+
 
 /* 5. Somando e reduzindo
 
@@ -85,6 +97,16 @@ console.log('-----Exercício 4-----')
 - Verifique, manualmente (no papel ou na calculadora) se o valor final está correto. */
 console.log('-----Exercício 5-----')
 
+function somaOuMultiplicacao(acc, item) {
+  if (item % 2 == 0) {
+    return item + acc
+  } else {
+    return item * acc
+  }
+}
+const exercicio5 = exercicio1.reduce(somaOuMultiplicacao, 0)
+console.log(exercicio5)
+
 
 /* 6. Cifra de Cezar
 
@@ -92,3 +114,17 @@ console.log('-----Exercício 5-----')
 
 - Compartilhe no canal de exercícios no discord, usando a hashtag #exercicioMapaConversãoJS */
 console.log('-----Exercício 6-----')
+
+const abcdario = 'A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z'
+const splitABC = abcdario.split(", ")
+
+let nome
+function cifraCesar(nome) {
+  nome = nome.toUpperCase()
+  const splitName = nome.split('')
+  for (let i = 0; i < splitName.length; i++) {
+    const index = splitABC.findIndex((item) => item === splitName[i])
+    console.log(splitABC[index + splitName.length + 1])
+  }
+}
+cifraCesar('Sergio')
