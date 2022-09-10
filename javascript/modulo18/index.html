@@ -7,12 +7,17 @@
   <title>DOM</title>
 </head>
 <body>
-  <div id="app">1</div>
+  <div id="app" class="root" x="10">1 - Teste</div>
   <div>2</div>
   <!-- <script src="./index.js"></script> -->
   <script>
-    console.log(window.document.getElementById('app'))
-    console.log(window.document.getElementsByTagName('div'))
+    const div = window.document.getElementById('app')
+    console.log(div)
+    console.log(div.attributes)
+    console.log(div.attributes.x)
+    console.log(div.hasAttribute('class'))
+    console.log(div.hasAttribute('z'))
+    // console.log(window.document.getElementsByTagName('div'))
   </script>
 </body>
 </html>
