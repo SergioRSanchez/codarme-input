@@ -21,8 +21,25 @@ containerRoot.appendChild(title)  // Inserindo o elemento
 console.log('Trabalhando com eventos')
 const inputN1 = document.getElementById('n1')  // podemos suprimir o uso do window, que irá funcionar tbm
 const inputN2 = document.getElementById('n2')
+const button = document.getElementById('btn')
+const appElement = document.getElementById('app2')
+
+const resultElement = document.createElement('p')
+resultElement.innerText = 'Não há valor ainda'
+resultElement.style.backgroundColor = 'yellow'
+appElement.appendChild(resultElement)
+
+button.onclick = function () {
+  const n1Value = Number(inputN1.value)
+  const n2Value = Number(inputN2.value)
+  const result = n1Value + n2Value
+  resultElement.innerText = `${n1Value} + ${n2Value} = ${result}`
+}
 
 inputN1.onblur = function () {
   console.log('INPUT', inputN1.value)
+}
+inputN2.onblur = function () {
+  console.log('INPUT', inputN2.value)
 }
 
