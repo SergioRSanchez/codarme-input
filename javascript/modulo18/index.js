@@ -18,7 +18,7 @@ title.innerText = 'Olá DOM'  // Adicionando um texto
 containerRoot.appendChild(title)  // Inserindo o elemento
 
 
-console.log('Trabalhando com eventos')
+console.log('Trabalhando com eventos, criando uma calculadora de soma')
 const inputN1 = document.getElementById('n1')  // podemos suprimir o uso do window, que irá funcionar tbm
 const inputN2 = document.getElementById('n2')
 const button = document.getElementById('btn')
@@ -37,9 +37,17 @@ button.onclick = function () {
 }
 
 inputN1.onblur = function () {
-  console.log('INPUT', inputN1.value)
+  console.log('INPUT', inputN1.value)  // valor do primeiro input
 }
 inputN2.onblur = function () {
-  console.log('INPUT', inputN2.value)
+  console.log('INPUT', inputN2.value)  // valor do segundo input
 }
 
+
+console.log('Mais de uma função por evento')
+
+const ev01 = () => console.log('1')
+const ev02 = () => console.log('2')
+button.addEventListener('click', ev01)
+button.addEventListener('click', ev02)
+button.removeEventListener('click', ev01)  // removemos o evento 1
