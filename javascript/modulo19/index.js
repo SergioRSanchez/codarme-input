@@ -40,3 +40,25 @@ const { age2, ...others } = {
   company2: 'Sanchez Filho'
 }
 console.log(age2, others)
+
+
+console.log('----- Juntando Tudo -----')
+const person2 = {
+  name5: 'sergio',
+  age: 32,
+}
+
+const { name5, ...company } = {  // separamos para o name5 ficar em uma variável, e o restante ficar em ...company
+  name5: 'x',
+  company: 'Sanchez',
+  city: 'São José do Rio Preto',
+}
+
+
+function showGuest({ name5, ...person }) {
+  console.log(name5, person)
+}
+showGuest({
+  ...person2,
+  ...company,  // como separamos o name5 da variável, iremos usar o restante
+})
