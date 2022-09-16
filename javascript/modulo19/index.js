@@ -62,3 +62,17 @@ showGuest({
   ...person2,
   ...company,  // como separamos o name5 da variável, iremos usar o restante
 })
+
+
+console.log('----- Default Params -----')
+function sum(n1, n2 = 20) {  // Caso não passemos nenhum valor para n2, seu valor será 20
+  console.log(n1 + n2)
+}
+sum(10, 10)
+sum(10)
+
+function guest(person = { name: 'Não tem' }) {
+  console.log(person.name)
+}
+guest()
+guest({ name: 'Sergio' })
