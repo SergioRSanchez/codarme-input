@@ -76,3 +76,31 @@ function guest(person = { name: 'Não tem' }) {
 }
 guest()
 guest({ name: 'Sergio' })
+
+
+console.log('----- Funções como propriedades de Objetos -----')
+//  Maneira padrão, definindo a função como propriedade do objeto
+const person3 = {
+  getAge: function () {
+    console.log(33)
+  }
+}
+person3.getAge()
+
+//  Definindo a função fora da variável, e usando como propriedade do objeto
+function getAge2() {
+  console.log(34)
+}
+const person4 = {
+  // getAge2: getAge2
+  getAge2  //  Nesse caso, o valor da chave é igual o valor da referência, por isso usamos só getAge
+}
+person4.getAge2()
+
+//  Definindo direto como uma função
+const person5 = {
+  getAge3() {
+    console.log(35)
+  }
+}
+person5.getAge3()
