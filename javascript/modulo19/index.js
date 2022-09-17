@@ -104,3 +104,9 @@ const person5 = {
   }
 }
 person5.getAge3()
+
+
+console.log('----- Persistência de Dados -----')
+// window.localStorage.setItem('teste', '0001')  // Mesmo comentando esse código, ele irá se manter na memória da nossa url
+const item2 = window.localStorage.getItem('teste')
+console.log(item2)
