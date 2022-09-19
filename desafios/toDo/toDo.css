@@ -1,0 +1,59 @@
+:root {
+  font-size: 62.5%;  /* 1rem = 10px */
+  
+  --blue1: #19456B;
+  --blue2: #11698E;
+  --green1: #16C79A;
+  --white1: #FFFFFF;
+  --white2: #F8F1F1;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  color: rgb(41, 130, 218);
+}
+
+#todocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+#buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+#addButton, #delButton {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 100rem;
+  border: 0rem;
+  color: #ffffff;
+  background-color: #199b19;
+}
+
+#delButton {
+  background-color: rgb(221, 50, 50);
+}
+
+#task {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#tasks {
+  font-size: 1.5rem;
+  color: gray;
+}
