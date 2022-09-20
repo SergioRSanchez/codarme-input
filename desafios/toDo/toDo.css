@@ -12,9 +12,12 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
-h1 {
+header {
   font-size: 5rem;
-  color: rgb(41, 130, 218);
+  color: var(--blue1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #todocontainer {
@@ -39,8 +42,8 @@ h1 {
   font-size: 2rem;
   border-radius: 100rem;
   border: 0rem;
-  color: #ffffff;
-  background-color: #199b19;
+  color: var(--white1);
+  background-color: var(--green1);
 }
 
 #delButton {

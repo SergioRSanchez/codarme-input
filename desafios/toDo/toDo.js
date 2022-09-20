@@ -20,7 +20,7 @@ const addEvent = addButton.onclick = function (event) {
   //  Botão para confirmar
   const confirm = function (event) {
     addButton.innerText = 'O'
-    addButton.style.backgroundColor = 'rgb(41, 130, 218)'
+    addButton.style.backgroundColor = 'var(--blue2)'
   }
   confirm()
 
@@ -44,7 +44,7 @@ const addEvent = addButton.onclick = function (event) {
     tarefa.innerText = input.value
     tarefas.appendChild(tarefa)
     task.removeChild(input)
-    addButton.removeEventListener('click', confirm)
+    addButton.removeEventListener('click', addEvent)
   }
 
   //  Negar tarefa
