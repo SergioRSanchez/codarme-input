@@ -1,0 +1,55 @@
+:root {
+  font-size: 62.5%;  /* 1rem = 10px */
+  
+  --blue1: #19456B;
+  --blue2: #11698E;
+  --green1: #19d81f;
+  --red1: #e01313;
+  --white1: #FFFFFF;
+  --white2: #F8F1F1;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: var(--blue1);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+#inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+#inputContainerButtons {
+  display: flex;
+  gap: 2rem;
+}
+
+#addTask, #resetTask {
+  background-color: var(--green1);
+  border: 0rem;
+  color: var(--white1);
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+#resetTask {
+  background-color: var(--red1);
+}
+
+#taskContainer {
+  width: 10rem;
+  display: flex;
+  gap: 2rem;
+}
