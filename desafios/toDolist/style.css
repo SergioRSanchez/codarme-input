@@ -3,8 +3,8 @@
   
   --blue1: #19456B;
   --blue2: #11698E;
-  --green1: #19d81f;
-  --red1: #e01313;
+  --green1: #178c1b;
+  --red1: #c71b1b;
   --white1: #FFFFFF;
   --white2: #F8F1F1;
 }
@@ -13,6 +13,9 @@ body {
   font-family: 'Manrope', sans-serif;
   padding: 2rem;
 }
+
+
+/* Header */
 
 header h1 {
   font-size: 4rem;
@@ -31,6 +34,9 @@ header h1 {
   margin-bottom: 4rem;
 }
 
+
+/* Botões */
+
 #inputContainerButtons {
   display: flex;
   gap: 2rem;
@@ -42,14 +48,40 @@ header h1 {
   color: var(--white1);
   border-radius: 3rem;
   padding: 1rem;
+  cursor: pointer
 }
 
 #resetTask {
   background-color: var(--red1);
 }
 
-#taskContainer {
-  width: 10rem;
+
+/* Tasks */
+
+#taskContainers {
   display: flex;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1;
+}
+
+.taskContainer {
+  border: 1px solid var(--blue2);
+  padding: 1rem;
+  width: 15rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+  flex-wrap:wrap;
+  word-wrap: break-word;
+}
+
+.taskContainer p {
+  font-size: 1.2rem;
+  text-align:center;
+  color: rgb(123, 113, 113);
+  font-weight: 500;
+  flex-wrap:wrap;
+  word-wrap: break-word;
 }
