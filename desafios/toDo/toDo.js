@@ -1,58 +1,81 @@
-//  Capturamos botão de adicionar evento
-const addButton = window.document.getElementById('addButton')
+//  Capturando elementos lista, input e botão
+const listElement = document.querySelector('ul')
+const inputElement = document.querySelector('input')
+const buttonElement = document.querySelector('button')
 
+//  Criei um array vazio chamado tarefas
+//  No lugar do array nós colocamos esse comando para pegar/get o item e colocar em uma lista de tarefas chamada "list_tarefas" OU um array vazio
+//  JSON.parse transforma o JSON em um valor ou objeto
+let tarefas = JSON.parse(localStorage.getItem('list_tarefas')) || []
 
-//  Capturando div que iremos inserir o formulário
-const task = window.document.getElementById('task')
+//  Função de Mostrar Tarefas
+function mostraTarefas() {
+  //  Ele limpa, pois se não ia adicionar a tarefa atual e a tarefa anterior
+  listElement.innerHTML = ''
+  //  For que percorre o array tarefas
+  for (item of tarefas) {
+    //  Cria o elemento li
+    const itemList = document.createElement('li')
+    //  Criou o texto de cada tarefa
+    const itemText = document.createTextNode(item)
 
+    //  Estilo do Material Design
+    itemList.setAttribute('class', 'mdl-list__item')
 
-//  Capturando div dos botões
-const buttons = window.document.getElementById('buttons')
+    //  Cria o elemento de link (a)
+    const linkElement = document.createElement('a')
+    //  Estilo do Material Design
+    linkElement.setAttribute('class', 'material-icons')
 
+    //  Cria o texto com a palavra 'delete', para estilo do Material Design
+    const linkText = document.createTextNode('delete')
+    //  Deu o append para inserir o 'delete'
+    linkElement.appendChild(linkText)
 
-//  Capturando div das tarefas
-const tarefas = window.document.getElementById('tasks')
+    //  Index/Posição de nossa tarefa no array tarefas
+    const pos = tarefas.indexOf(item)
+    //  Adicionou a função de Remover Tarefa no ícone do 'delete', removendo o item na posição dele
+    linkElement.setAttribute('onclick', `removeTarefa(${pos})`)
 
+    itemList.appendChild(itemText)
+    itemList.appendChild(linkElement)
 
-//  Inserindo input na div
-const addEvent = addButton.onclick = function (event) {
-
-  //  Botão para confirmar
-  const confirm = function (event) {
-    addButton.innerText = 'O'
-    addButton.style.backgroundColor = 'var(--blue2)'
+    listElement.appendChild(itemList)
   }
-  confirm()
-
-  //  Criamos um input
-  const input = window.document.createElement('input')
-  input.setAttribute('id', 'formulario')
-  input.setAttribute('placeholder', 'Insira sua tarefa')
-  task.appendChild(input)
-
-  //  Botao para excluir
-  const delButton = window.document.createElement('button')
-  delButton.setAttribute('id', 'delButton')
-  delButton.innerText = 'X'
-  buttons.appendChild(delButton)
-
-  //  Confirmar tarefa
-  addButton.onclick = function (event) {
-    //  Tarefa na tela
-    const tarefa = window.document.createElement('p')
-    tarefa.setAttribute('class', 'tarefa')
-    tarefa.innerText = input.value
-    tarefas.appendChild(tarefa)
-    task.removeChild(input)
-    addButton.removeEventListener('click', addEvent)
-  }
-
-  //  Negar tarefa
-  delButton.onclick = function (event) {
-    task.removeChild(input)
-    delButton.removeEventListener('click', addEvent)
-  }
-
-
 }
 
+//  Chamando função de Mostrar Tarefas
+mostraTarefas()
+
+//  Função de Adicionar Tarefas
+function addTarefa() {
+  //  Cria uma variável chamada tarefa, que vai receber o valor do input
+  const tarefa = inputElement.value
+  //  Dá o push no array tarefas
+  tarefas.push(tarefa)
+  //  Depois de adicionar ele limpa o campo do input
+  inputElement.value = ''
+  //  Chama a função de Mostrar as Tarefas
+  mostraTarefas()
+  //  Salvar no localStorage
+  saveInLocalStorage()
+}
+
+//  Atribuindo função de Adicionar Tarefas ao clicar no botão
+buttonElement.setAttribute('onclick', 'addTarefa()')
+
+//  Função de remover Tarefa
+function removeTarefa(pos) {
+  //  Vai no index/posição do array tarefas, e dá um splice na posição do item tirando só 1 item
+  tarefas.splice(pos, 1)
+  mostraTarefas()
+  //  Salvar no localStorage
+  saveInLocalStorage()
+}
+
+//  Função para mandar o item para o localStorage
+function saveInLocalStorage() {
+  //  Vai setar no localStorage uma chave que vai receber valores do "array tarefas", que agora é o JSON.parse
+  //  O JSON.stringify converte o valor em JSON, no caso tinha um array, e converteu em JSON
+  localStorage.setItem('list_tarefas', JSON.stringify(tarefas))
+}
