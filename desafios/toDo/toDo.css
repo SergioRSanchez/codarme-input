@@ -1,7 +1,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  margin: 100px;
+  margin: auto;
+  margin-top: 100px;
   
   background: rgba(242,246,248,1);
   background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(217,226,232,1) 28%, rgba(206,217,222,1) 77%, rgba(225,240,249,1) 100%);
@@ -22,15 +23,23 @@
   border: 0px solid #000000;
 
   padding: 10px;
+
+  max-width: 700px;
 }
 
 h2 {
   font-size: 30px;
   font-weight: 600;
-  color: #555252;
+  /* color: #555252; */
+
+  background: linear-gradient(90deg, #458AFF, #67676b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .title {
+  margin-top: 10px;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -48,4 +57,39 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width:720px) {
+  :root {
+    font-size: 62.5%;
+  }
+
+  .content {
+    margin: 100px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .mdl-textfield__input {
+    max-width: 250px;
+  }
+
+  .is-dirty,
+  .is-focused {
+    max-width: 250px;
+  }
+
+  .mdl-button {
+    font-size: 13px;
+  }
+
+  .mdl-list__item {
+    font-size: 13px;
+  }
+
+  .material-icons {
+    font-size: 20px;
+  }
 }
