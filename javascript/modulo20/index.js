@@ -20,6 +20,25 @@ list2.forEach((item) => {
 
 console.log('finalizou aqui novamente')
 
+
 // setInterval(() => {
 //   console.log('intervalo')
-// }, 1000)
+// }, 1000)  // A cada 1 segundo executa o comando
+
+
+//  Para fazer uma promise, nós devemos passar duas funções como parâmetros, uma caso Sucesso e um caso Erro
+//  para chamar a função de sucesso(resolve), usamos o .then
+//  para chamar a função de erro(reject), usamos o .catch
+const promise = new Promise((resolve, reject) => {
+  const sucesso = false  //  se true irá executar resolve, se false irá executar reject
+  if (sucesso) {
+    resolve('Resolve')
+  } else {
+    reject('Reject')
+  }
+})
+promise.then((result) => {
+  console.log('SUCESSO: ', result)
+}).catch((result) => {
+  console.log('ERRO: ', result)
+})
