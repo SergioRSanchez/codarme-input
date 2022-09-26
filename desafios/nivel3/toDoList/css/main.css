@@ -1,7 +1,128 @@
 :root {
   font-size: 62.5%;
+
+  --black1: #18161F;
+  --black2: #262331;
+  --purple1: #787490;
+  --purple2: #D6D4E2;
+  --white: #FFFFFF;
+  --green: #01B553;
+  --pink: #FF4A7D;
 }
 
-* {
+body {
   font-family: 'Space Grotesk', sans-serif;
+  background: #E5E5E5;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 32rem;
+  gap: 7.4rem;
+}
+
+/* Input Container */
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+
+/* Title */
+
+#title {
+  display: flex;
+  gap: 2.1rem;
+  align-items: center;
+
+  margin-top: 7.2rem;
+}
+
+#title h1,
+#task-title h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: var(--black2);
+}
+
+
+/* Input Container */
+
+#input {
+  display: flex;
+  gap: 1.6rem;
+}
+
+#input-task {
+  width: 47.2rem;
+  /* height: 5.6rem; */
+
+  background: var(--white);
+  border: .1rem solid var(--purple2);
+  border-radius: 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  padding: 1.6rem;
+}
+
+#btn-create {
+  background: var(--green);
+  color: var(--white);
+
+  padding: 1.6rem 3.2rem;
+
+  border-radius: 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+
+/* Task Container */
+
+#task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+#task-title {
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+}
+
+.task {
+  display: flex;
+
+  max-width: 64rem;
+
+  padding: 2.4rem;
+
+  background: var(--white);
+  border: .2rem solid var(--green);
+  border-radius: 2.4rem;
+
+  justify-content: space-between;
+}
+
+.task-field {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.task p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  color: var(--green);
 }
