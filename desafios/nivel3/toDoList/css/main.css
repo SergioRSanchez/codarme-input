@@ -161,7 +161,7 @@ button {
     display: flex;
     flex-direction: column;
   
-    padding: 0 10rem;
+    padding: 0 2rem;
     gap: 3.4rem;
   }
   
