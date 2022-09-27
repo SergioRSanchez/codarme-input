@@ -149,4 +149,5 @@ button {
 
 .checked p {
   color: var(--green);
+  text-decoration: line-through;
 }

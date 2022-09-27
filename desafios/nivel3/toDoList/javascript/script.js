@@ -1,4 +1,3 @@
-//  Capturando elementos
 const inputElement = document.getElementById('input-task')
 const createBtnElement = document.getElementById('btn-create')
 const listElement = document.querySelector('ul')
@@ -11,7 +10,6 @@ function showTasks() {
 
     const itemText = document.createTextNode(item.task)
 
-    //  criar o task field onde vai o check e a tarefa
     const taskFieldElement = document.createElement('a')
     taskFieldElement.setAttribute('class', 'task-field')
 
@@ -28,7 +26,6 @@ function showTasks() {
     containerTaskFieldElement.appendChild(checkElement)
     containerTaskFieldElement.appendChild(pElement)
 
-    //  criar o botão de deletar
     const deleteBtnElement = document.createElement('button')
     deleteBtnElement.setAttribute('class', 'btn-delete')
     const deleteImg = document.createElement('img')
@@ -36,12 +33,18 @@ function showTasks() {
     deleteBtnElement.append(deleteImg)
     taskFieldElement.appendChild(deleteBtnElement)
 
-
     const pos = tarefas.indexOf(item)
 
     deleteBtnElement.setAttribute('onclick', `removeTarefa(${pos})`)
     checkElement.setAttribute('onclick', `checkTarefa(${pos})`)
 
+    saveInLocalStorage()
+
+    pElement.appendChild(itemText)
+    listElement.appendChild(taskFieldElement)
+    taskFieldElement.appendChild(deleteBtnElement)
+
+    //  Aqui está o erro
     if (item.checked === true) {
       taskFieldElement.setAttribute('class', 'task-field checked')
       checkElementImg.setAttribute('src', './icons/check.svg')
@@ -49,13 +52,6 @@ function showTasks() {
       taskFieldElement.setAttribute('class', 'task-field')
       checkElementImg.setAttribute('src', './icons/frame.svg')
     }
-
-    saveInLocalStorage()
-
-
-    pElement.appendChild(itemText)
-    listElement.appendChild(taskFieldElement)
-    taskFieldElement.appendChild(deleteBtnElement)
   }
 }
 
@@ -81,14 +77,12 @@ createBtnElement.setAttribute('onclick', 'addTarefa()')
 
 
 function checkTarefa(pos) {
-  showTasks()
-  for (item of tarefas) {
-    if (tarefas[pos].checked === false) {
-      tarefas[pos].checked = true
-    } else {
-      tarefas[pos].checked = false
-    }
+  if (tarefas[pos].checked === false) {
+    tarefas[pos].checked = true
+  } else {
+    tarefas[pos].checked = false
   }
+
   showTasks()
   saveInLocalStorage()
 }
@@ -102,5 +96,3 @@ function removeTarefa(pos) {
 function saveInLocalStorage() {
   localStorage.setItem('list_todo', JSON.stringify(tarefas))
 }
-
-//  Agora só falta mudar as propriedades conforme o checked = true
