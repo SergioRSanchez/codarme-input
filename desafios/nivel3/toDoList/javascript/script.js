@@ -44,7 +44,6 @@ function showTasks() {
     listElement.appendChild(taskFieldElement)
     taskFieldElement.appendChild(deleteBtnElement)
 
-    //  Aqui está o erro
     if (item.checked === true) {
       taskFieldElement.setAttribute('class', 'task-field checked')
       checkElementImg.setAttribute('src', './icons/check.svg')
