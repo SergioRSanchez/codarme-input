@@ -20,7 +20,7 @@ function showTasks() {
     const checkElement = document.createElement('button')
     checkElement.setAttribute('class', 'btn-check')
     const checkElementImg = document.createElement('img')
-    checkElementImg.setAttribute('src', './icons/frame.svg')
+    checkElementImg.setAttribute('src', './icons/Frame.svg')
     const pElement = document.createElement('p')
     checkElement.appendChild(checkElementImg)
     containerTaskFieldElement.appendChild(checkElement)
@@ -50,7 +50,7 @@ function showTasks() {
       checkElementImg.setAttribute('src', './icons/check.svg')
     } else {
       taskFieldElement.setAttribute('class', 'task-field')
-      checkElementImg.setAttribute('src', './icons/frame.svg')
+      checkElementImg.setAttribute('src', './icons/Frame.svg')
     }
   }
 }
