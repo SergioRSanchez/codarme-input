@@ -15,6 +15,10 @@ body {
   background: #E5E5E5;
 }
 
+button {
+  cursor: pointer;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -99,21 +103,64 @@ body {
   gap: 1.9rem;
 }
 
+#task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
 .task {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 64rem;
+}
+
+.task-field {
+  display: flex;
+  background-color: var(--white);
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  justify-content: space-between;
+}
+
+.container-task-field {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.container-task-field p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  color: var(--black1);
+}
+
+.task-field button {
+  background: none;
+}
+
+
+/* .task {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 
   max-width: 64rem;
 
   padding: 2.4rem;
 
   background: var(--white);
-  border: .2rem solid var(--green);
+
   border-radius: 2.4rem;
 
   justify-content: space-between;
-}
+} */
 
-.task-field {
+/* .task-field {
   display: flex;
   align-items: center;
   gap: 2.4rem;
@@ -124,5 +171,23 @@ body {
   font-size: 1.6rem;
   line-height: 2.4rem;
 
-  color: var(--green);
+  color: var(--black1);
 }
+
+.btn-delete {
+  background: none;
+}
+
+.checked {
+  border: .2rem solid var(--green);
+}
+
+.checked .check path {
+  fill: var(--green);
+  stroke: var(--white);
+}
+
+.checked p {
+  color: var(--green);
+  text-decoration: line-through;
+} */
