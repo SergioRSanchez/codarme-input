@@ -42,6 +42,16 @@ function showTasks() {
     deleteBtnElement.setAttribute('onclick', `removeTarefa(${pos})`)
     checkElement.setAttribute('onclick', `checkTarefa(${pos})`)
 
+    if (item.checked === true) {
+      taskFieldElement.setAttribute('class', 'task-field checked')
+      checkElementImg.setAttribute('src', './icons/check.svg')
+    } else {
+      taskFieldElement.setAttribute('class', 'task-field')
+      checkElementImg.setAttribute('src', './icons/frame.svg')
+    }
+
+    saveInLocalStorage()
+
 
     pElement.appendChild(itemText)
     listElement.appendChild(taskFieldElement)
@@ -71,6 +81,7 @@ createBtnElement.setAttribute('onclick', 'addTarefa()')
 
 
 function checkTarefa(pos) {
+  showTasks()
   for (item of tarefas) {
     if (tarefas[pos].checked === false) {
       tarefas[pos].checked = true
