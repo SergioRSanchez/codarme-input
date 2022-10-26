@@ -1,4 +1,6 @@
-import { soma } from './calc.js'
+import { soma } from './calc.js'  // named import
+import { divisao as operacao } from './calc.js'  // named import
+// import nomeQualquer from './calc.js' // default import
 
 //  Escopo local
 {
@@ -39,3 +41,9 @@ console.log(i)  //  Ou seja, nós não manipulamos o i, e sim o array dentro del
 console.log('Executando a função do arquivo calc.js')
 const result = soma(1, 2)
 console.log(result)
+
+// const result = nomeQualquer(2, 3)  // executando o default import
+// console.log(result)
+
+const result2 = operacao(4, 2)
+console.log(result2)
