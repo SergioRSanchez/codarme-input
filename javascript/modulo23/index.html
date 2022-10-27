@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello React</title>
+
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+  
+  <div id="root"></div>
+
+  <script>
+
+    // Vanilla Js
+
+    // const rootElement = document.getElementById('root')
+    // const title = document.createElement('h1')
+    // title.className = 'title'
+
+    // const span = document.createElement('span')
+    // span.textContent = 'Olá React'
+
+    // title.appendChild(span)
+    // rootElement.appendChild(title)
+
+
+    const rootElement = document.getElementById('root')
+    
+    const span = React.createElement('span', {
+      children: 'Olá React'
+    })
+
+    const title = React.createElement('h1', {
+      className: 'title',
+      children: span
+    })
+
+    ReactDOM.render(title, rootElement)
+
+
+  </script>
+
+</body>
+</html>
