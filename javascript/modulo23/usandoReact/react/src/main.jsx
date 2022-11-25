@@ -5,11 +5,13 @@ import ReactDOM from 'react-dom/client'
 // import { Profile } from './pages/Profile'
 // import { Comment } from './pages/Comment'
 // import { ImageCard } from './pages/ImageCard'
-import { Clock } from './pages/Clock'
+// import { Clock } from './pages/Clock'
+import { Home } from './pages/Contador'
+
 // import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Clock />
+    <Home />
   </React.StrictMode>
 )
