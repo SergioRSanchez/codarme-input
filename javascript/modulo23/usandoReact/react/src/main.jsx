@@ -6,12 +6,13 @@ import ReactDOM from 'react-dom/client'
 // import { Comment } from './pages/Comment'
 // import { ImageCard } from './pages/ImageCard'
 // import { Clock } from './pages/Clock'
-import { Home } from './pages/Contador'
+// import { Home } from './pages/Contador'
+import { ToDo } from './pages/ToDo'
 
 // import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home />
+    <ToDo />
   </React.StrictMode>
 )

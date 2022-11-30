@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #F5F4F6;
+  display: flex;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 7.2rem 32rem ;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7.2rem;
+  width: 64rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.inputTitle,
+.boardTitle {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.inputTitle h1,
+.boardTitle h1 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.inputField {
+  display: flex;
+  gap: 1.6rem;
+}
+
+input {
+  padding: 1.6rem;
+  background: #FFFFFF;
+  color: #787491;
+
+  border: 1px solid #D6D4E2;
+  border-radius: 16px;
+
+  width: 45.9rem;
+}
+
+.inputField button {
+  background: #02B553;
+  border-radius: 16px;
+  color: #FFFFFF;
+  padding: 1.6rem 3.2rem;
+  border: 0px solid #02B553;
+}
+
+.boardTitle {
+  margin-bottom: 2.4rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.taskChecked,
+.taskUnchecked {
+  background: #FFFFFF;
+  border: .2rem solid #02B553;
+  border-radius: 2.4rem;
+
+  padding: 1.5rem 2.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.taskUnchecked {
+  border: .2rem solid #FFFFFF;
+}
+
+.taskChecked button,
+.taskUnchecked button {
+  background-color: transparent;
+  border: 0;
+}
+
+.taskChecked p,
+.taskUnchecked p{
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #18161F;
+  margin: 0;
+}
+
+.taskChecked p {
+  color: #02B553;
+  text-decoration: line-through;
+}
