@@ -8,42 +8,47 @@ import { ReactComponent as RemoveIcon } from '../../assets/taskRemove.svg'
 
 import './main.css'
 
-function Task ({todo}) {
-  const [ checked, setChecked ] = useState(false)
-  const toggleCheck = () => {setChecked(!checked)}
-  return (
-    <>
-      <div className={checked ? "taskChecked" : "taskUnchecked"}>
-        <button onClick={toggleCheck}>
-          {checked ? <CheckIcon width={24} /> : <UncheckedIcon width={24} />}
-        </button>
-        <p>{todo.text}</p>
-        <button>
-          <RemoveIcon width={24} onClick={() => deleteTodo(todo.id)} />
-        </button>
-      </div>
-    </>
-  )
-}
 
 
-const initialValue = {}
-
-export function ToDo (props) {
+export function ToDo () {
 
   const [text, setText] = useState(null)
-  const [todos, setTodos] = useState([])
-  const [id, setId] = useState(0)
 
-  const todoCreate = (text) => {
-    const todoObj = {text: text, id: id}
-    setId(id + 1)
-    todoHandler(todoObj)
+  const [todos, setTodos] = useState([{
+    id: 1,
+    text: 'Codar',
+    checked: true
+  }, {
+    id: 2,
+    text: 'Estudar React',
+    checked: false
+  }])
+
+  //  Adicionar uma tarefa
+  const addTask = () => {
+    if (!text) return alert('Preencha uma tarefa.');
+    const newTask = {
+      id: Math.random(),
+      text: text,
+      checked: false
+    }
+
+    setTodos([...todos, newTask])
+    setText('')
   }
 
-  const todoHandler = (todo) => {
-    console.log(todo)
-    setTodos([...todos, todo])
+  //  Remover uma tarefa
+  const removeTask = (id) => {
+    const newList = todos.filter(todos => todos.id !== id);
+    setTodos(newList)
+  }
+
+  //  Checar tarefa
+  const toogleChecked = (id, checked) => {
+    const index = todos.findIndex(todos => todos.id === id)
+    const newList = todos
+    newList[index].checked = !checked
+    setTodos([...newList])
   }
 
   return (
@@ -56,11 +61,12 @@ export function ToDo (props) {
           </div>
           <div className="inputField">
             <input 
+              value={text}
               type="text" 
               placeholder="Descreva a tarefa" 
-              onChange={(e) => setText(e.target.value)} 
+              onChange={(e) => setText(e.target.value)}
             />
-            <button onClick={() => props.todoCreate(text)}>Criar tarefa</button>
+            <button onClick={addTask}>Criar tarefa</button>
           </div>
         </div>
 
@@ -69,9 +75,20 @@ export function ToDo (props) {
             <BoardIcon width={32} />
             <h1>Quadro de tarefas</h1>
           </div>
-          <ul todoHandler={todoHandler}>
-            {todos.map((todo) => <Task todo={todo} key={todo.id} />)}
-            {/* <Task /> */}
+          <ul>
+            {todos.map((text) => (
+              <>
+                <div key={text.id} className={text.checked ? "taskChecked" : "taskUnchecked"} >
+                  <button onClick={() => toogleChecked(text.id, text.checked)}>
+                    {text.checked ? <CheckIcon width={24} /> : <UncheckedIcon width={24} />}
+                  </button>
+                  <p>{text.text}</p>
+                  <button>
+                    <RemoveIcon width={24} onClick={() => removeTask(text.id)} />
+                  </button>
+                </div>
+              </>
+            ))}
           </ul>
         </div>
       </div>
