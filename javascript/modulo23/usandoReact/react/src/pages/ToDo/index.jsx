@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { ReactComponent as TaskIcon } from '../../assets/toDoTask.svg'
 import { ReactComponent as BoardIcon } from '../../assets/toDoBoard.svg'
@@ -9,20 +9,19 @@ import { ReactComponent as RemoveIcon } from '../../assets/taskRemove.svg'
 import './main.css'
 
 
-
 export function ToDo () {
 
   const [text, setText] = useState(null)
 
-  const [todos, setTodos] = useState([{
-    id: 1,
-    text: 'Codar',
-    checked: true
-  }, {
-    id: 2,
-    text: 'Estudar React',
-    checked: false
-  }])
+  const [todos, setTodos] = useState([])
+
+  //  Resgatar tarefas do Local Storage
+  useEffect(() => {
+    if (localStorage.getItem('localTasks')) {
+      const storedList = JSON.parse(localStorage.getItem('localTasks'))
+      setTodos(storedList)
+    }
+  }, [])
 
   //  Adicionar uma tarefa
   const addTask = () => {
@@ -33,6 +32,8 @@ export function ToDo () {
       checked: false
     }
 
+    // localStorage.setItem(newTask.id, JSON.stringify(newTask))
+    localStorage.setItem('localTasks', JSON.stringify([...todos, newTask]))
     setTodos([...todos, newTask])
     setText('')
   }
@@ -41,6 +42,7 @@ export function ToDo () {
   const removeTask = (id) => {
     const newList = todos.filter(todos => todos.id !== id);
     setTodos(newList)
+    localStorage.setItem('localTasks', JSON.stringify(newList))
   }
 
   //  Checar tarefa
@@ -49,6 +51,12 @@ export function ToDo () {
     const newList = todos
     newList[index].checked = !checked
     setTodos([...newList])
+  }
+
+  //  Limpar Local Storage
+  const handleClear = () => {
+    setTodos([])
+    localStorage.clear()
   }
 
   return (
@@ -89,6 +97,14 @@ export function ToDo () {
                 </div>
               </>
             ))}
+            {!todos.length ? null : (
+              <div>
+                <button 
+                  onClick={() => handleClear()}>
+                  Clear
+                </button>
+              </div>
+            )}
           </ul>
         </div>
       </div>
