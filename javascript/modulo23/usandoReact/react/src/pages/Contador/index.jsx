@@ -27,7 +27,7 @@ export function Home() {
 
   return (
     <>
-      <div className='container'>
+      <div className='bg-red-500'>
         <button onClick={toggleCounter}>
           {enabled ? 'Esconder' : 'Mostrar'} contador
         </button>
