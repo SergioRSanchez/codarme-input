@@ -38,6 +38,13 @@ export function ToDo () {
     setText('')
   }
 
+  //  Adicionando com 'ENTER'
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      addTask();
+    }
+  }
+
   //  Remover uma tarefa
   const removeTask = (id) => {
     const newList = todos.filter(todos => todos.id !== id);
@@ -73,6 +80,7 @@ export function ToDo () {
               type="text" 
               placeholder="Descreva a tarefa" 
               onChange={(e) => setText(e.target.value)}
+              onKeyDown={handleKeyPress}
             />
             <button onClick={addTask}>Criar tarefa</button>
           </div>
