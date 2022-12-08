@@ -107,7 +107,7 @@ export function ToDo () {
             ))}
             {!todos.length ? null : (
               <div>
-                <button 
+                <button className='clear'
                   onClick={() => handleClear()}>
                   Clear
                 </button>

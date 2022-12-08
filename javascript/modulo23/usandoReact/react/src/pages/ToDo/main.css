@@ -12,6 +12,10 @@ body {
   padding: 7.2rem 32rem ;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -62,6 +66,10 @@ input {
   border: 0px solid #02B553;
 }
 
+.inputField button:hover {
+  background: #0a7c3d;
+}
+
 .boardTitle {
   margin-bottom: 2.4rem;
 }
@@ -107,4 +115,16 @@ ul {
 .taskChecked p {
   color: #02B553;
   text-decoration: line-through;
+}
+
+.clear {
+  background-color: red;
+  border-radius: 12px;
+  color: #FFFFFF;
+  padding: 1rem 2.5rem;
+  border: 0px solid red;
+}
+
+.clear:hover {
+  background-color: #ba0e0e;
 }
