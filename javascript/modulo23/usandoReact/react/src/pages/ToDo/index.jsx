@@ -58,6 +58,7 @@ export function ToDo () {
     const newList = todos
     newList[index].checked = !checked
     setTodos([...newList])
+    localStorage.setItem('localTasks', JSON.stringify(newList))
   }
 
   //  Limpar Local Storage
