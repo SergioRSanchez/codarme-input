@@ -94,6 +94,12 @@ ul {
   margin-bottom: 1.6rem;
 }
 
+.taskElement {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .taskUnchecked {
   border: .2rem solid #FFFFFF;
 }

@@ -6,6 +6,7 @@ import { ReactComponent as CheckIcon } from '../../assets/taskCheck.svg'
 import { ReactComponent as UncheckedIcon } from '../../assets/taskUnchecked.svg'
 import { ReactComponent as RemoveIcon } from '../../assets/taskRemove.svg'
 
+
 import './main.css'
 
 
@@ -67,6 +68,14 @@ export function ToDo () {
     localStorage.clear()
   }
 
+  //  Alerta para limpar o Local Storage
+  const confirmClear = () => {
+    var r = confirm("Deseja limpar o quadro de tarefas?");
+    if (r == true) {
+      handleClear()
+    }
+  }
+
   return (
     <>
       <div className="container">
@@ -96,10 +105,12 @@ export function ToDo () {
             {todos.map((text) => (
               <>
                 <div key={text.id} className={text.checked ? "taskChecked" : "taskUnchecked"} >
-                  <button onClick={() => toogleChecked(text.id, text.checked)}>
-                    {text.checked ? <CheckIcon width={24} /> : <UncheckedIcon width={24} />}
-                  </button>
-                  <p>{text.text}</p>
+                  <div className='taskElement'>
+                    <button onClick={() => toogleChecked(text.id, text.checked)}>
+                      {text.checked ? <CheckIcon width={24} /> : <UncheckedIcon width={24} />}
+                    </button>
+                    <p>{text.text}</p>
+                  </div>
                   <button>
                     <RemoveIcon width={24} onClick={() => removeTask(text.id)} />
                   </button>
@@ -109,7 +120,7 @@ export function ToDo () {
             {!todos.length ? null : (
               <div>
                 <button className='clear'
-                  onClick={() => handleClear()}>
+                  onClick={() => confirmClear()}>
                   Clear
                 </button>
               </div>
