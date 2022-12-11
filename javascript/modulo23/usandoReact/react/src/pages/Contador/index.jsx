@@ -27,7 +27,7 @@ export function Home() {
 
   return (
     <>
-      <div className='bg-red-500'>
+      <div className='bg-yellow-500 p-2 sm:p-8 sm:bg-red-500 md:p-16 md:bg-green-500 hover:bg-[#098098]'>
         <button onClick={toggleCounter}>
           {enabled ? 'Esconder' : 'Mostrar'} contador
         </button>
