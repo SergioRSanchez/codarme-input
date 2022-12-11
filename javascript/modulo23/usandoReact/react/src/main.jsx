@@ -7,12 +7,13 @@ import ReactDOM from 'react-dom/client'
 // import { ImageCard } from './pages/ImageCard'
 // import { Clock } from './pages/Clock'
 // import { ToDo } from './pages/ToDo'
-import { Home } from './pages/Contador'
+// import { Home } from './pages/Contador'
+import { Stone } from './pages/Stone'
 
 import './main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home />
+    <Stone />
   </React.StrictMode>
 )
