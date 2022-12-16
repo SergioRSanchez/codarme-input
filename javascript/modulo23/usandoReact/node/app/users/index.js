@@ -1,4 +1,10 @@
-module.exports = function create(request, response) {
+//  Definindo nossa lista de usuários com Hard Coded (passando direto no código)
+const users = [
+  { id: 1, name: 'Sergio' },
+  { id: 2, name: 'Julia' },
+]
+
+function create(request, response) {
   //  Adiciona um item na lista
   const body = []
 
@@ -11,9 +17,10 @@ module.exports = function create(request, response) {
   request.on('end', () => {
     const content = Buffer.concat(body).toString()
     const data = JSON.parse(content)
-    console.log(data)
+    // console.log(data)
     const user = { id: 3, name: data.name }
     users.push(user)
+    console.log(response)
 
     //  Devolvendo o código de status 201 (Created)
     response.statusCode = 201
@@ -26,7 +33,7 @@ module.exports = function create(request, response) {
   })
 }
 
-module.exports = function list(request, response) {
+function list(request, response) {
   //  Devolvendo o código de status 200 (OK)
   response.statusCode = 200
 
@@ -41,3 +48,10 @@ module.exports = function list(request, response) {
 function update(request, response) { }
 
 function remove(request, response) { }
+
+module.exports = {
+  create,
+  list,
+  update,
+  remove
+}

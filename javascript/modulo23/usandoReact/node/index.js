@@ -3,33 +3,25 @@ const http = require('http')
 const url = require('url')
 
 //  Importando as rotas
-const users = require('./app/users')
+const usersRoute = require('./app/users')
+const todosRoute = require('./app/todos')
 
-// const todos = require('./app/todos')
-console.log(users)
+// Definindo as rotas da maneira mais prática
+const routes = {
+  '/users': {
+    POST: usersRoute.create,
+    GET: usersRoute.list,
+    PUT: usersRoute.update,
+    DELETE: usersRoute.remove
+  },
 
-//  Definindo nossa lista de usuários com Hard Coded (passando direto no código)
-// const users = [
-//   { id: 1, name: 'Sergio' },
-//   { id: 2, name: 'Julia' },
-// ]
-
-//  Definindo as rotas da maneira mais prática
-// const routes = {
-//   '/users': {
-//     POST: users.create,
-//     GET: users.list,
-//     PUT: users.update,
-//     DELETE: users.remove
-//   },
-
-//   '/todos': {
-//     POST: todos.create,
-//     GET: todos.list,
-//     PUT: todos.update,
-//     DELETE: todos.remove
-//   }
-// }
+  '/todos': {
+    POST: todosRoute.create,
+    GET: todosRoute.list,
+    PUT: todosRoute.update,
+    DELETE: todosRoute.remove
+  }
+}
 
 
 //  Criando o servidor
@@ -42,51 +34,62 @@ const server = http.createServer((request, response) => {
   const requestUrl = url.parse(request.url, true)
 
   // Definindo as rotas
-  // routes[requestUrl.pathname][request.method](request, response)
+  routes[requestUrl.pathname][request.method](request, response)
 
 
 
 
   //  Método com ifs usado para explicar, foi substituído pelo método acima
   //  Definindo rotas
-  if (requestUrl.pathname === '/users') {
+  // if (requestUrl.pathname === '/users') {
 
-    //  Método POST e GET
-    if (request.method === 'POST') {
+  //   //  Método POST e GET
+  //   if (request.method === 'POST') {
 
-      //  Função importada de criar usuário
-      users.create(request, response)
+  //     //  Função importada de criar usuário
+  //     usersRoute.create(request, response)
 
-    } else if (request.method === 'GET') {
+  //   } else if (request.method === 'GET') {
 
-      //  Função importada de listar usuários
-      users.list(request, response)
+  //     //  Função importada de listar usuários
+  //     usersRoute.list(request, response)
 
-    } else if (request.method === 'PUT') {
+  //   } else if (request.method === 'PUT') {
 
-      //  Função importada de update de usuário
-      users.update(request, response)
+  //     //  Função importada de update de usuário
+  //     usersRoute.update(request, response)
 
-    } else if (request.method === 'DELETE') {
+  //   } else if (request.method === 'DELETE') {
 
-      //  Função importada de apagar usuário
-      users.remove(request, response)
+  //     //  Função importada de apagar usuário
+  //     usersRoute.remove(request, response)
 
-    }
-  } else if (requestUrl.pathname === '/todos') {
+  //   }
+  // } else if (requestUrl.pathname === '/todos') {
 
-    const todos = [{
-      id: 1,
-      text: 'Estudar NodeJS',
-      completed: false
-    }]
+  //   //  Método POST e GET
+  //   if (request.method === 'POST') {
 
-    response.statusCode = 200
-    response.write(JSON.stringify(todos))
-    response.end()
+  //     //  Função importada de criar usuário
+  //     todosRoute.create(request, response)
 
-    return
-  }
+  //   } else if (request.method === 'GET') {
+
+  //     //  Função importada de listar usuários
+  //     todosRoute.list(request, response)
+
+  //   } else if (request.method === 'PUT') {
+
+  //     //  Função importada de update de usuário
+  //     todosRoute.update(request, response)
+
+  //   } else if (request.method === 'DELETE') {
+
+  //     //  Função importada de apagar usuário
+  //     todosRoute.remove(request, response)
+
+  //   }
+  // }
 
 
 
