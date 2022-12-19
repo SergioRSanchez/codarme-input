@@ -17,10 +17,9 @@ function create(request, response) {
   request.on('end', () => {
     const content = Buffer.concat(body).toString()
     const data = JSON.parse(content)
-    // console.log(data)
-    const user = { id: 3, name: data.name }
+    const user = { id: Math.random(), name: data.name }
     users.push(user)
-    console.log(response)
+    // console.log(response)
 
     //  Devolvendo o código de status 201 (Created)
     response.statusCode = 201
@@ -45,7 +44,27 @@ function list(request, response) {
   return
 }
 
-function update(request, response) { }
+function update(request, response) {
+  const body = []
+  request.on('data', (chunk) => {
+    body.push(chunk)
+  })
+  request.on('end', () => {
+    const content = Buffer.concat(body).toString()
+    const data = JSON.parse(content)
+    users.forEach((user) => {
+      if (data.id === user.id) {
+        user.name = data.name
+        response.statusCode = 200
+        response.write(JSON.stringify(user))
+        response.end()
+        return
+      }
+    })
+    return
+  })
+
+}
 
 function remove(request, response) { }
 

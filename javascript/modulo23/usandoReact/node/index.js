@@ -33,8 +33,15 @@ const server = http.createServer((request, response) => {
   //  Separando Path de queryString para ela ser parâmetro e não mais parte do Path
   const requestUrl = url.parse(request.url, true)
 
-  // Definindo as rotas
-  routes[requestUrl.pathname][request.method](request, response)
+
+  try {
+    //  Acessando as rotas
+    routes[requestUrl.pathname][request.method](request, response)
+  } catch (error) {
+    //  Se erro
+    response.statusCode = 404
+    response.end()
+  }
 
 
 
@@ -90,11 +97,6 @@ const server = http.createServer((request, response) => {
 
   //   }
   // }
-
-
-
-  response.statusCode = 404
-  response.end()
 
 })
 
