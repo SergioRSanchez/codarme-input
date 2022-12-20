@@ -67,7 +67,24 @@ function update(request, response) {
   })
 }
 
-function remove(request, response) { }
+function remove(request, response) {
+  const body = []
+  request.on('data', (chunk) => {
+    body.push(chunk)
+  })
+  request.on('end', () => {
+    const content = Buffer.concat(body).toString()
+    const data = JSON.parse(content)
+    users.forEach((user, index) => {
+      if (data.id === user.id) {
+        users.splice(index, 1)
+        response.statusCode = 200
+        response.end()
+        return
+      }
+    })
+  })
+}
 
 module.exports = {
   create,

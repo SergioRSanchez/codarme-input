@@ -64,7 +64,25 @@ function update(request, response) {
   })
 }
 
-function remove(request, response) { }
+function remove(request, response) {
+  const body = []
+  request.on('data', (chunk) => {
+    body.push(chunk)
+  })
+  request.on('end', () => {
+    const content = Buffer.concat(body).toString()
+    const data = JSON.parse(content)
+    todos.forEach((todo, index) => {
+      if (data.id === todo.id) {
+        todos.splice(index, 1)
+        response.statusCode = 200
+        // response.write(JSON.stringify(todo))
+        response.end()
+        return
+      }
+    })
+  })
+}
 
 module.exports = {
   create,
