@@ -14,7 +14,7 @@ function create(request, response) {
   request.on('end', () => {
     const content = Buffer.concat(body).toString()
     const data = JSON.parse(content)
-    const todo = { id: 4, text: data.text, completed: false }
+    const todo = { id: Math.random(), text: data.text, completed: false }
     todos.push(todo)
 
     response.statusCode = 201
@@ -37,7 +37,32 @@ function list(request, response) {
   return
 }
 
-function update(request, response) { }
+function update(request, response) {
+  const body = []
+  request.on('data', (chunk) => {
+    body.push(chunk)
+  })
+  request.on('end', () => {
+    const content = Buffer.concat(body).toString()
+    const data = JSON.parse(content)
+    todos.forEach((todo) => {
+      if (data.id === todo.id) {
+        if (todo.completed === false) {
+          todo.completed = true
+          response.statusCode = 200
+          response.write(JSON.stringify(todo))
+          response.end()
+          return
+        } else {
+          todo.completed = false
+          response.statusCode = 200
+          response.write(JSON.stringify(todo))
+          return
+        }
+      }
+    })
+  })
+}
 
 function remove(request, response) { }
 

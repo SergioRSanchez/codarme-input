@@ -59,11 +59,12 @@ function update(request, response) {
         response.write(JSON.stringify(user))
         response.end()
         return
+      } else {
+        return
       }
     })
     return
   })
-
 }
 
 function remove(request, response) { }
