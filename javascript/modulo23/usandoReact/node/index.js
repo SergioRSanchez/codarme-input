@@ -46,6 +46,7 @@ const server = http.createServer((request, response) => {
 
 
 
+
   //  Método com ifs usado para explicar, foi substituído pelo método acima
   //  Definindo rotas
   // if (requestUrl.pathname === '/users') {

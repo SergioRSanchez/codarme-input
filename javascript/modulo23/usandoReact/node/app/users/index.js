@@ -52,14 +52,13 @@ function update(request, response) {
   request.on('end', () => {
     const content = Buffer.concat(body).toString()
     const data = JSON.parse(content)
+
     users.forEach((user) => {
       if (data.id === user.id) {
         user.name = data.name
         response.statusCode = 200
         response.write(JSON.stringify(user))
         response.end()
-        return
-      } else {
         return
       }
     })
